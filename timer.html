@@ -1,0 +1,121 @@
+<!-- 
+  INSTRUCTIONS:
+  Copy EVERYTHING below this line and paste it into a "Custom HTML" or "Raw HTML" element 
+  in Systeme.io, ClickFunnels, WordPress, or any other website builder.
+  This will create a STICKY TOP BANNER.
+-->
+
+<!-- 1. Styles & Fonts -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '907155057168097'); 
+fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+
+<!-- 2. Configuration for Styles -->
+<script>
+  if (typeof tailwind !== 'undefined') {
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['Space Grotesk', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                primary: '#D90429',
+              }
+            }
+          }
+        }
+      }
+  }
+</script>
+
+<body class="bg-white text-slate-900 overflow-x-hidden antialiased selection:bg-blue-200 selection:text-slate-900 grid-bg">
+<noscript>
+  <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=907155057168097&ev=PageView&noscript=1"/>
+</noscript>
+<!-- 3. The Sticky Banner Widget -->
+<!-- Fixed position to stay at top, z-index high to cover other elements -->
+<div id="avada-sticky-banner" class="fixed top-0 left-0 w-full z-[9999] bg-black text-white shadow-2xl border-b border-gray-800 font-sans antialiased">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-center gap-4 md:gap-8">
+        
+        <!-- Pricing Section -->
+        <div class="flex items-center gap-3 shrink-0">
+             <span class="text-gray-500 font-bold line-through text-xs">€99</span>
+             <div class="bg-white text-black font-black px-2 py-0.5 rounded text-sm leading-none">€49</div>
+        </div>
+
+        <!-- Timer Label & Counter -->
+        <div class="flex items-center gap-3">
+             <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400 hidden sm:inline-block">Discount offer ends in</span>
+             
+             <!-- Timer Display -->
+             <div class="flex items-center gap-1 font-display font-bold text-base tabular-nums tracking-wider text-brand-primary bg-gray-900 px-3 py-1 rounded-md border border-gray-700 shadow-inner">
+                <span id="hours">00</span>
+                <span class="animate-pulse text-gray-500">:</span>
+                <span id="minutes">00</span>
+                <span class="animate-pulse text-gray-500">:</span>
+                <span id="seconds">00</span>
+             </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- 4. The Logic -->
+<script>
+    (function() {
+        // === CONFIGURATION ===
+        // 2 hours 23 minutes 49 seconds
+        var DURATION = (2 * 60 * 60 * 1000) + (23 * 60 * 1000) + (49 * 1000);
+        
+        var els = {
+            h: document.getElementById('hours'),
+            m: document.getElementById('minutes'),
+            s: document.getElementById('seconds')
+        };
+
+        function formatTime(val) {
+            return val.toString().padStart(2, '0');
+        }
+
+        function calculateTime() {
+            var now = Date.now();
+            
+            // Deterministic Sync Logic:
+            // This calculates a countdown based on the global timestamp.
+            // It ensures that any user, on any device (HTML builder or React App),
+            // sees the EXACT same time remaining without needing shared storage.
+            var remaining = DURATION - (now % DURATION);
+
+            var h = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+            var m = Math.floor((remaining / (1000 * 60)) % 60);
+            var s = Math.floor((remaining / 1000) % 60);
+
+            if (els.h) els.h.innerText = formatTime(h);
+            if (els.m) els.m.innerText = formatTime(m);
+            if (els.s) els.s.innerText = formatTime(s);
+        }
+
+        // Start Loop
+        setInterval(calculateTime, 1000);
+        calculateTime(); // Initial call
+    })();
+</script>
