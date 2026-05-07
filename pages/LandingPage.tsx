@@ -99,6 +99,11 @@ const LandingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans overflow-x-hidden selection:bg-orange-100">
 
+      {/* ═══ EUROPE BANNER ═══ */}
+      <div className="w-full bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 text-white text-center py-2.5 px-4">
+        <p className="text-xs md:text-sm font-bold tracking-wide">Now available in Europe</p>
+      </div>
+
       {/* ═══ STICKY HEADER ═══ */}
       <header className="sticky top-0 z-[60] bg-white/80 backdrop-blur-2xl border-b border-slate-100/60 px-5 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
