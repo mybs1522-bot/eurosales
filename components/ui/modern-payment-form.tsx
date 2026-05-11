@@ -20,6 +20,13 @@ function PayPalButton({ email, onSuccess, amount }: { email: string; onSuccess: 
   const containerRef = useRef<HTMLDivElement>(null);
   const [ppReady, setPpReady] = useState(!!(window as any).paypal);
   const [ppError, setPpError] = useState('');
+  const [emailMsg, setEmailMsg] = useState('');
+
+  // Keep refs to latest values so the PayPal onApprove closure never goes stale
+  const onSuccessRef = useRef(onSuccess);
+  onSuccessRef.current = onSuccess;
+  const emailRef = useRef(email);
+  emailRef.current = email;
 
   useEffect(() => {
     if (!PAYPAL_CLIENT_ID) { setPpError('not-configured'); return; }
@@ -41,13 +48,43 @@ function PayPalButton({ email, onSuccess, amount }: { email: string; onSuccess: 
       createOrder: (_: any, actions: any) =>
         actions.order.create({
           purchase_units: [{ amount: { value: amountVal }, description: 'Avada Design Bundle – All Courses' }],
-          ...(email ? { payer: { email_address: email } } : {}),
+          payer: { email_address: emailRef.current },
         }),
-      onApprove: async (_: any, actions: any) => { await actions.order.capture(); if ((window as any).fbq) (window as any).fbq('track', 'Purchase', { value: 49, currency: 'EUR' }); onSuccess(); },
+      onApprove: async (_: any, actions: any) => { await actions.order.capture(); if ((window as any).fbq) (window as any).fbq('track', 'Purchase', { value: 49, currency: 'EUR' }); onSuccessRef.current(); },
       onError: (e: any) => console.error('[PayPal]', e),
     }).render(containerRef.current);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ppReady]);
+
+  useEffect(() => {
+    if (email && email.includes('@')) {
+      setEmailMsg('');
+      const existing = document.getElementById('pp-email-error');
+      if (existing) existing.remove();
+    }
+  }, [email]);
+
+  const handleOverlayClick = () => {
+    if (!emailRef.current || !emailRef.current.includes('@')) {
+      setEmailMsg('show');
+      const emailInput = document.querySelector('input[type="email"]') as HTMLElement;
+      if (emailInput) {
+        // Insert error message above the email input
+        let errEl = document.getElementById('pp-email-error');
+        if (!errEl) {
+          errEl = document.createElement('p');
+          errEl.id = 'pp-email-error';
+          errEl.style.cssText = 'color:#ef4444;font-size:12px;margin:0 0 4px;font-weight:600;';
+          errEl.textContent = 'Enter Your Mail Address';
+          emailInput.parentElement?.parentElement?.insertBefore(errEl, emailInput.parentElement);
+        }
+        emailInput.classList.remove('shake-input');
+        void emailInput.offsetWidth;
+        emailInput.classList.add('shake-input');
+        emailInput.focus();
+      }
+    }
+  };
 
   if (ppError === 'not-configured') return (
     <div className="w-full py-3.5 bg-[#003087] rounded-xl flex items-center justify-center gap-2.5 opacity-40 cursor-not-allowed select-none">
@@ -62,7 +99,24 @@ function PayPalButton({ email, onSuccess, amount }: { email: string; onSuccess: 
     <div className="w-full h-[52px] bg-[#003087]/10 rounded-xl animate-pulse" />
   );
 
-  return <div ref={containerRef} className="w-full" />;
+  const needsEmail = !email || !email.includes('@');
+
+  return (
+    <>
+      <style>{`@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}.shake-input{animation:shake 0.4s ease;}`}</style>
+      <div className="relative w-full" style={{ minHeight: 52 }}>
+        <div ref={containerRef} className="w-full" style={needsEmail ? { pointerEvents: 'none', position: 'relative', zIndex: 1 } : undefined} />
+        {needsEmail && (
+          <div
+            onClickCapture={(e) => { e.stopPropagation(); e.preventDefault(); handleOverlayClick(); }}
+            onMouseDownCapture={(e) => { e.stopPropagation(); e.preventDefault(); }}
+            className="absolute top-0 left-0 w-full h-full cursor-pointer"
+            style={{ zIndex: 9999 }}
+          />
+        )}
+      </div>
+    </>
+  );
 }
 
 const appearance: Appearance = {
