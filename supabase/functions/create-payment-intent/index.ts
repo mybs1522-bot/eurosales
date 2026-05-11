@@ -49,7 +49,6 @@ serve(async (req: Request) => {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: numericAmount,
       currency: currency || 'eur',
-      setup_future_usage: 'off_session', // CRITICAL FOR ONE-CLICK UPSELL
       metadata: { product: 'Avada Design Bundle' },
       payment_method_configuration: 'pmc_1TVz0fGGsoQTkhyve6oTQ6jG',
     });
