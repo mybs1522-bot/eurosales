@@ -143,17 +143,8 @@ function CheckoutForm({ email, onSuccess, onBack, amount, paymentIntentId }: Che
     setIsLoading(true);
     setMessage("");
 
-    // Link customer to PI before confirming (best-effort — never block payment on failure)
-    let customerId: string | undefined;
-    if (email && email.includes('@')) {
-      try {
-        const res = await linkCustomerToPaymentIntent(paymentIntentId, email);
-        customerId = res.customerId;
-      } catch (err: any) {
-        console.warn('[Stripe] Customer link failed (non-blocking):', err?.message);
-      }
-    }
-
+    // Confirm payment FIRST — Apple Pay / Google Pay require confirmPayment to be called
+    // immediately on user gesture. Any async work before it breaks the gesture chain.
     const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
@@ -165,12 +156,27 @@ function CheckoutForm({ email, onSuccess, onBack, amount, paymentIntentId }: Che
     if (error) {
       setMessage(error.message ?? "Payment failed. Please try again.");
       setIsLoading(false);
-    } else if (paymentIntent?.status === "succeeded") {
+      return;
+    }
+
+    if (paymentIntent?.status === "succeeded") {
       const numericAmount = parseInt(amount.replace(/[^0-9]/g, ''), 10) || 9;
       if ((window as any).fbq) (window as any).fbq('track', 'Purchase', { value: numericAmount, currency: 'EUR' });
       const paymentMethodId = typeof paymentIntent.payment_method === 'string'
         ? paymentIntent.payment_method
         : paymentIntent.payment_method?.id;
+
+      // Link customer AFTER payment so upsell can charge the saved card
+      let customerId: string | undefined;
+      if (email && email.includes('@')) {
+        try {
+          const res = await linkCustomerToPaymentIntent(paymentIntentId, email);
+          customerId = res.customerId;
+        } catch (err: any) {
+          console.warn('[Stripe] Customer link failed (non-blocking):', err?.message);
+        }
+      }
+
       onSuccess(customerId, paymentMethodId, paymentIntent.id);
     } else {
       setMessage("Unexpected state — please contact support.");
