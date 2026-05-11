@@ -38,7 +38,9 @@ const callEdgeFunction = async (body: Record<string, any>): Promise<any> => {
 export const createPaymentIntent = async (amount: string = '€49'): Promise<{clientSecret: string, paymentIntentId: string}> => {
   const data = await callEdgeFunction({ amount, currency: 'eur' });
   if (!data.clientSecret) throw new Error(data.error ?? 'No clientSecret returned.');
-  return { clientSecret: data.clientSecret, paymentIntentId: data.paymentIntentId };
+  // clientSecret format is "pi_XXXXX_secret_YYYYY" — extract the PI ID from it
+  const paymentIntentId = data.clientSecret.split('_secret_')[0];
+  return { clientSecret: data.clientSecret, paymentIntentId };
 };
 
 export const linkCustomerToPaymentIntent = async (paymentIntentId: string, email: string): Promise<{customerId: string}> => {
