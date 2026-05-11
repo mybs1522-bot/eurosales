@@ -143,16 +143,14 @@ function CheckoutForm({ email, onSuccess, onBack, amount, paymentIntentId }: Che
     setIsLoading(true);
     setMessage("");
 
-    // Link customer to PI before confirming so card is saved for upsell
+    // Link customer to PI before confirming (best-effort — never block payment on failure)
     let customerId: string | undefined;
     if (email && email.includes('@')) {
       try {
         const res = await linkCustomerToPaymentIntent(paymentIntentId, email);
         customerId = res.customerId;
       } catch (err: any) {
-        setMessage(err?.message ?? 'Failed to link account. Please try again.');
-        setIsLoading(false);
-        return;
+        console.warn('[Stripe] Customer link failed (non-blocking):', err?.message);
       }
     }
 
