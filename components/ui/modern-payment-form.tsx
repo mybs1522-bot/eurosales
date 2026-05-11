@@ -183,7 +183,10 @@ function CheckoutForm({ email, onSuccess, onBack, amount, paymentIntentId }: Che
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
 
-      <PaymentElement options={{ layout: 'accordion' }} />
+      <PaymentElement options={{
+        layout: 'accordion',
+        terms: { card: 'never', applePay: 'never', googlePay: 'never', paypal: 'never' },
+      }} />
 
       {email && (
         <p className="text-xs text-gray-400 text-center">
