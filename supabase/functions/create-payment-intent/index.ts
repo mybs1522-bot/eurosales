@@ -17,16 +17,11 @@ serve(async (req: Request) => {
       httpClient: Stripe.createFetchHttpClient(),
     });
 
-    const { email, amount, currency } = await req.json();
-    let numericAmount = 900; // default 9
-    if (amount) {
-      const cleanAmount = amount.replace(/[^0-9.]/g, '');
-      numericAmount = Math.round(parseFloat(cleanAmount) * 100);
-    }
+    const { email, amount, currency, paymentIntentId } = await req.json();
 
-    // Find or create customer (required to save card)
-    let customerId = undefined;
-    if (email) {
+    // CASE 1: Update existing PI with customer (called on submit when email is known)
+    if (paymentIntentId && email) {
+      let customerId: string | undefined;
       const existingCustomers = await stripe.customers.list({ email, limit: 1 });
       if (existingCustomers.data.length > 0) {
         customerId = existingCustomers.data[0].id;
@@ -34,20 +29,33 @@ serve(async (req: Request) => {
         const newCustomer = await stripe.customers.create({ email });
         customerId = newCustomer.id;
       }
+      const updated = await stripe.paymentIntents.update(paymentIntentId, {
+        customer: customerId,
+        receipt_email: email,
+      });
+      return new Response(
+        JSON.stringify({ clientSecret: updated.client_secret, customerId }),
+        { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // CASE 2: Create new PI on page load (no email/customer yet)
+    let numericAmount = 4900; // default €49
+    if (amount) {
+      const cleanAmount = amount.replace(/[^0-9.]/g, '');
+      numericAmount = Math.round(parseFloat(cleanAmount) * 100);
     }
 
     const paymentIntent = await stripe.paymentIntents.create({
       amount: numericAmount,
-      currency: currency || 'usd',
-      customer: customerId,
-      setup_future_usage: 'off_session', // THIS IS CRITICAL FOR ONE-CLICK UPSELL
-      receipt_email: email || undefined,
+      currency: currency || 'eur',
+      setup_future_usage: 'off_session', // CRITICAL FOR ONE-CLICK UPSELL
       metadata: { product: 'Avada Design Bundle' },
-      automatic_payment_methods: { enabled: true },
+      payment_method_configuration: 'pmc_1TVz0fGGsoQTkhyve6oTQ6jG',
     });
 
     return new Response(
-      JSON.stringify({ clientSecret: paymentIntent.client_secret, customerId }),
+      JSON.stringify({ clientSecret: paymentIntent.client_secret, paymentIntentId: paymentIntent.id }),
       { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
   } catch (err: any) {

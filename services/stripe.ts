@@ -10,7 +10,7 @@ export const stripePromise = loadStripe(
   'pk_live_51PRJCsGGsoQTkhyv6OrT4zvnaaB5Y0MSSkTXi0ytj33oygsfW3dcu6aOFa9q3dr2mXYTCJErnFQJcOcyuDAsQd4B00lIAdclbB'
 );
 
-export const createPaymentIntent = async (email: string, amount: string = '€9'): Promise<{clientSecret: string, customerId: string}> => {
+const callEdgeFunction = async (body: Record<string, any>): Promise<any> => {
   let res: Response;
   try {
     res = await fetch(`${SUPABASE_URL}/functions/v1/create-payment-intent`, {
@@ -20,29 +20,31 @@ export const createPaymentIntent = async (email: string, amount: string = '€9'
         Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
         apikey: SUPABASE_ANON_KEY,
       },
-      body: JSON.stringify({ email, amount, currency: 'eur' }),
+      body: JSON.stringify(body),
     });
   } catch (netErr) {
-    console.error('[Stripe] Network error calling edge function:', netErr);
+    console.error('[Stripe] Network error:', netErr);
     throw new Error('Network error — could not reach payment server.');
   }
-
   let data: any = {};
-  try {
-    data = await res.json();
-  } catch {
-    console.error('[Stripe] Edge function returned non-JSON, status:', res.status);
+  try { data = await res.json(); } catch {
     throw new Error(`Server error (${res.status}) — Edge Function may not be deployed yet.`);
   }
-
   console.log('[Stripe] Edge function response:', res.status, data);
+  if (!res.ok) throw new Error(data.error ?? `Server error ${res.status}`);
+  return data;
+};
 
-  if (!res.ok || !data.clientSecret) {
-    throw new Error(data.error ?? `Server error ${res.status} — deploy the Edge Function and set STRIPE_SECRET_KEY.`);
-  }
-  
-  // Return customerId along with clientSecret
-  return { clientSecret: data.clientSecret, customerId: data.customerId };
+export const createPaymentIntent = async (amount: string = '€49'): Promise<{clientSecret: string, paymentIntentId: string}> => {
+  const data = await callEdgeFunction({ amount, currency: 'eur' });
+  if (!data.clientSecret) throw new Error(data.error ?? 'No clientSecret returned.');
+  return { clientSecret: data.clientSecret, paymentIntentId: data.paymentIntentId };
+};
+
+export const linkCustomerToPaymentIntent = async (paymentIntentId: string, email: string): Promise<{customerId: string}> => {
+  const data = await callEdgeFunction({ paymentIntentId, email });
+  if (!data.customerId) throw new Error(data.error ?? 'Failed to link customer.');
+  return { customerId: data.customerId };
 };
 
 export const chargeSavedCardUpsell = async (customerId: string, amount: string = '€27', paymentMethodId?: string, paymentIntentId?: string): Promise<boolean> => {
