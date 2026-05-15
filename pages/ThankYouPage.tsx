@@ -39,13 +39,13 @@ const PRODUCT_META: Record<
   }
 > = {
   render: {
-    title: "SketchUp + V-Ray + D5 Render",
-    subtitle: "3-Course Rendering Pipeline",
+    title: "AutoCAD + SketchUp + D5 Render",
+    subtitle: "3-Course Plan-to-Render Pipeline",
     gradient: "from-blue-600 to-indigo-500",
     icon: <Camera size={20} className="text-white" />,
     items: [
+      "AutoCAD Planning & Drafting",
       "SketchUp Pro 3D Modeling",
-      "V-Ray Photorealistic Rendering",
       "D5 Render AI Real-time Engine",
       "10,000+ Textures Library",
       "Official Certificates",

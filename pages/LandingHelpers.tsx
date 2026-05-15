@@ -17,14 +17,14 @@ export const RAW_JOINERS = [
 ];
 
 export const PROBLEM_POINTS = [
-  { emoji: "⏰", text: "Spending days on a single 3D view because you don't know SketchUp, V-Ray, or D5 Render — and clients keep asking for revisions?" },
-  { emoji: "😰", text: "Feeling overwhelmed by the sheer number of tools studios expect you to know — modeling, rendering, AI — where do you even start?" },
+  { emoji: "⏰", text: "Spending days on a single project because you don't know AutoCAD, SketchUp, or D5 Render — and clients keep asking for revisions?" },
+  { emoji: "😰", text: "Feeling overwhelmed by the sheer number of tools studios expect you to know — planning, designing, rendering — where do you even start?" },
   { emoji: "🤖", text: "Watching AI generate stunning renders in seconds and worrying your traditional skills will become obsolete before you catch up?" }
 ];
 
 export const TRANSFORMATION_STORIES = [
-  { name: "Emma R.", role: "Freelance Designer", before: "Struggling alone with YouTube tutorials for months. Her SketchUp models looked amateur, V-Ray kept crashing, and clients wouldn't pay more than €200.", after: "Mastered the full SketchUp → V-Ray → D5 Render AI pipeline with 24/7 team support. Now charges €3,500+ per room and delivers in 48 hours instead of 2 weeks.", emoji: "✨" },
-  { name: "Daniel C.", role: "Architecture Student", before: "Terrified of AI replacing his future job. College taught outdated software. Had no rendering skills and zero portfolio pieces worth showing.", after: "We walked him through the entire design-to-render workflow. He now uses SketchUp for modeling, V-Ray for stills, and D5 AI for real-time client presentations. Just landed a dream internship.", emoji: "🎓" }
+  { name: "Emma R.", role: "Freelance Designer", before: "Struggling alone with YouTube tutorials for months. Her floor plans were rough, SketchUp models looked amateur, and clients wouldn't pay more than €200.", after: "Mastered the full AutoCAD → SketchUp → D5 Render AI pipeline with 24/7 team support. Now charges €3,500+ per room and delivers in 48 hours instead of 2 weeks.", emoji: "✨" },
+  { name: "Daniel C.", role: "Architecture Student", before: "Terrified of AI replacing his future job. College taught outdated software. Had no rendering skills and zero portfolio pieces worth showing.", after: "We walked him through the entire plan-to-render workflow. He now uses AutoCAD for planning, SketchUp for designing, and D5 AI for real-time client presentations. Just landed a dream internship.", emoji: "🎓" }
 ];
 
 export const PAGE_PREVIEWS_ROW1 = [
@@ -42,8 +42,8 @@ export const PAGE_PREVIEWS_ROW2 = [
 ];
 
 export const FEAR_STATS = [
-  { stat: '82%', label: 'of visualization jobs now require rendering skills alongside 3D modeling. SketchUp alone isn\'t enough.', icon: '📉' },
-  { stat: '10x', label: 'faster output when you use the SketchUp + V-Ray + D5 Render AI pipeline together.', icon: '🚀' },
+  { stat: '82%', label: 'of visualization jobs now require planning, designing & rendering skills. SketchUp alone isn\'t enough.', icon: '📉' },
+  { stat: '10x', label: 'faster output when you use the AutoCAD + SketchUp + D5 Render AI pipeline together.', icon: '🚀' },
   { stat: '24/7', label: 'Team support. We guide you through every installation, render, and software question personally.', icon: '🤝' },
   { stat: '15 Days', label: 'From opening SketchUp for the first time to creating portfolio-ready photorealistic renders.', icon: '⏳' },
 ];
@@ -124,8 +124,8 @@ export const SocialProofToast: React.FC = () => {
 
 /* ─── CONSTANTS ─── */
 export const VALUE_STACK_ITEMS = [
+  { name: 'AutoCAD Planning & Drafting — Complete Course', value: 'Included' },
   { name: 'SketchUp 3D Modeling — Complete Course', value: 'Included' },
-  { name: 'V-Ray Photo-Realism Masterclass', value: 'Included' },
   { name: 'D5 Real-Time AI Rendering Course', value: 'Included' },
   { name: '10,000+ Premium Texture Library', value: 'Included' },
   { name: '2,000+ Drag-and-Drop 3D Models', value: 'Included' },
@@ -135,25 +135,25 @@ export const VALUE_STACK_ITEMS = [
 ];
 
 export const TESTIMONIALS_LANDING = [
-  { name: 'Emma R.', role: 'Freelance Designer', location: 'Los Angeles, USA', content: 'I went from zero SketchUp knowledge to delivering photorealistic V-Ray renders in 3 weeks. The 24/7 support team patiently walked me through every crash and weird shadow. Now I use D5 Render AI and feel completely secure in my career.' },
-  { name: 'James C.', role: 'Senior Architect', location: 'New York, USA', content: 'Having SketchUp, V-Ray, and D5 Render in one bundle is genius. My studio now uses the full pipeline to generate gorgeous client presentations in minutes. Best €9 our firm ever invested.' },
-  { name: 'Sophie L.', role: '3D Visualizer', location: 'London, UK', content: 'The step-by-step guidance from SketchUp modeling to final V-Ray render is incredible. The D5 Render course lets me make real-time changes during client meetings. Complete game-changer.' },
-  { name: 'Daniel C.', role: 'Architecture Student', location: 'Toronto, Canada', content: 'College taught me outdated software. This bundle gave me SketchUp + two rendering engines in two weeks. I started freelancing before graduation and now earn more than some employed architects.' },
-  { name: 'Olivia B.', role: 'Interior Designer', location: 'Sydney, Australia', content: 'To have someone look at your screen and say "press this button" saves weeks of frustration. The SketchUp course builds the model, V-Ray makes it stunning, D5 makes it instant. All for €9.' },
-  { name: 'Marco R.', role: 'Landscape Architect', location: 'Milan, Italy', content: 'D5 Render combined with V-Ray is just magical. I model in SketchUp, do beauty shots in V-Ray, and use D5 for real-time client walkthroughs. It took away all my anxiety about falling behind.' },
-  { name: 'Sarah K.', role: 'Studio Owner', location: 'Berlin, Germany', content: 'My team of 4 now works with zero stress because we integrated the SketchUp → V-Ray → D5 pipeline. No more late nights before client meetings. We deliver faster, charge more.' },
-  { name: 'Ryan M.', role: 'Freelance Visualizer', location: 'Dubai, UAE', content: 'I almost quit 3D entirely because I couldn\'t connect the dots between modeling and rendering. This bundle connected everything. SketchUp for structure, V-Ray for polish, D5 AI for speed.' },
-  { name: 'Chloe P.', role: 'Design Student', location: 'Singapore', content: 'Started from absolute zero. Didn\'t even know what SketchUp was. 15 days later, my portfolio had photorealistic renders from V-Ray and real-time walkthroughs from D5 that landed me a paid studio gig.' },
-  { name: 'Alex D.', role: 'Architect & Educator', location: 'Barcelona, Spain', content: 'Universities don\'t teach this pipeline. SketchUp + V-Ray + D5 Render AI is the modern standard. I recommend this €9 bundle to all my students — it\'s more practical than their entire semester.' },
+  { name: 'Emma R.', role: 'Freelance Designer', location: 'Los Angeles, USA', content: 'I went from zero knowledge to delivering full plans and photorealistic D5 renders in 3 weeks. The 24/7 support team patiently walked me through every step. Now I feel completely secure in my career.' },
+  { name: 'James C.', role: 'Senior Architect', location: 'New York, USA', content: 'Having AutoCAD, SketchUp, and D5 Render in one bundle is genius. My studio now uses the full pipeline — plan, design, render — to generate gorgeous client presentations in minutes. Best €9 our firm ever invested.' },
+  { name: 'Sophie L.', role: '3D Visualizer', location: 'London, UK', content: 'The step-by-step guidance from AutoCAD planning to SketchUp modeling to D5 rendering is incredible. I can make real-time changes during client meetings. Complete game-changer.' },
+  { name: 'Daniel C.', role: 'Architecture Student', location: 'Toronto, Canada', content: 'College taught me outdated software. This bundle gave me AutoCAD + SketchUp + D5 Render in two weeks. I started freelancing before graduation and now earn more than some employed architects.' },
+  { name: 'Olivia B.', role: 'Interior Designer', location: 'Sydney, Australia', content: 'To have someone look at your screen and say "press this button" saves weeks of frustration. AutoCAD for planning, SketchUp for designing, D5 for rendering. All for €9.' },
+  { name: 'Marco R.', role: 'Landscape Architect', location: 'Milan, Italy', content: 'D5 Render combined with SketchUp is just magical. I plan in AutoCAD, design in SketchUp, and use D5 for real-time client walkthroughs. It took away all my anxiety about falling behind.' },
+  { name: 'Sarah K.', role: 'Studio Owner', location: 'Berlin, Germany', content: 'My team of 4 now works with zero stress because we integrated the AutoCAD → SketchUp → D5 pipeline. No more late nights before client meetings. We deliver faster, charge more.' },
+  { name: 'Ryan M.', role: 'Freelance Visualizer', location: 'Dubai, UAE', content: 'I almost quit design entirely because I couldn\'t connect the dots between planning and rendering. This bundle connected everything. AutoCAD for plans, SketchUp for 3D, D5 AI for speed.' },
+  { name: 'Chloe P.', role: 'Design Student', location: 'Singapore', content: 'Started from absolute zero. Didn\'t even know what AutoCAD was. 15 days later, my portfolio had professional floor plans and photorealistic renders from D5 that landed me a paid studio gig.' },
+  { name: 'Alex D.', role: 'Architect & Educator', location: 'Barcelona, Spain', content: 'Universities don\'t teach this pipeline. AutoCAD + SketchUp + D5 Render AI is what the industry actually uses. I recommend this €9 bundle to all my students — it\'s more practical than their entire semester.' },
 ];
 
 export const FAQ_ITEMS_LANDING = [
-  { question: "What exactly do I get for €9?", answer: "You get 3 complete courses: SketchUp Pro (3D modeling from scratch), V-Ray Photorealism (magazine-quality renders), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software download links, a certified diploma, and 24/7 team support. Lifetime access, one-time payment." },
-  { question: "I'm a complete beginner — is this for me?", answer: "Absolutely! The SketchUp course starts from 'how to open the software' and builds up to full 3D interiors. V-Ray and D5 Render courses follow the same beginner-friendly approach. Our 24/7 support team is always a WhatsApp message away whenever you feel stuck." },
+  { question: "What exactly do I get for €9?", answer: "You get 3 complete courses: AutoCAD (professional 2D floor plans & drafting), SketchUp Pro (3D modeling from scratch), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software download links, a certified diploma, and 24/7 team support. Lifetime access, one-time payment." },
+  { question: "I'm a complete beginner — is this for me?", answer: "Absolutely! The AutoCAD course starts from 'how to open the software' and builds up to full floor plans. SketchUp and D5 Render courses follow the same beginner-friendly approach. Our 24/7 support team is always a WhatsApp message away whenever you feel stuck." },
   { question: "Why is it so cheap? What's the catch?", answer: "No catch. We believe high-quality design education shouldn't cost €300+. We've served 50,000+ students at this price point and it works — low price, high volume, massive impact. You get the same content other platforms charge hundreds for." },
-  { question: "Do I need to buy expensive software?", answer: "Not at all. We provide links to official free or student versions of SketchUp, V-Ray, and D5 Render. You won't spend a single extra euro on software licenses." },
-  { question: "Will this actually help me get clients or a job?", answer: "Yes. The #1 reason designers struggle to land clients is they can't produce photorealistic renders. This bundle teaches you the full pipeline — SketchUp to model, V-Ray for beauty shots, D5 AI for real-time presentations. Designers with these skills charge €2,000–€5,000 per project." },
-  { question: "How long does it take to finish all 3 courses?", answer: "Most students complete the full pipeline in 2–3 weeks at 1–2 hours per day. SketchUp takes about 5 days, V-Ray about 4, and D5 Render about 3. By day 15, you'll have portfolio-ready renders." },
+  { question: "Do I need to buy expensive software?", answer: "Not at all. We provide links to official free or student versions of AutoCAD, SketchUp, and D5 Render. You won't spend a single extra euro on software licenses." },
+  { question: "Will this actually help me get clients or a job?", answer: "Yes. The #1 reason designers struggle to land clients is they can't plan, design, and render professionally. This bundle teaches you the full pipeline — AutoCAD for planning, SketchUp for designing, D5 AI for rendering. Designers with these skills charge €2,000–€5,000 per project." },
+  { question: "How long does it take to finish all 3 courses?", answer: "Most students complete the full pipeline in 2–3 weeks at 1–2 hours per day. AutoCAD takes about 5 days, SketchUp about 5, and D5 Render about 3. By day 15, you'll have portfolio-ready renders." },
   { question: "What if it's not for me?", answer: "We offer a 100% money-back guarantee within 7 days. If you feel it's not a good fit, just email us and we'll refund your €9 immediately — no questions asked. Zero risk." },
 ];
 
@@ -166,18 +166,18 @@ export const INCOME_TIERS = [
 
 export const COURSES_LANDING = [
   {
-    id: '3', title: 'SketchUp 3D', software: 'SketchUp', students: '55k',
-    description: 'Build stunning 3D models from scratch — walls, furniture, kitchens, bathrooms. The foundation of every great render starts here.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1wl6by5AO5MiPeoYsZ8F6Zi5AJahoeTQo',
-    learningPoints: ['Build complete 3D interiors from a blank canvas', 'Apply textures, materials & furniture with confidence', 'Export professional scenes ready for V-Ray & D5 Render'],
-    workflowImpact: 'See your imagination come to life in 3D — no experience needed.'
+    id: '1', title: 'AutoCAD Planning', software: 'AutoCAD', students: '42.5k',
+    description: 'Draw professional 2D floor plans, layouts & construction drawings. The essential first step before any 3D work.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1fV5bz4JDugh8HxLMJ0fXu5K5sDj3qlSR',
+    learningPoints: ['Draw accurate floor plans & furniture layouts from scratch', 'Print to-scale drawings for construction', 'Use shortcuts to draft 10x faster than others'],
+    workflowImpact: 'Create professional blueprints that contractors can actually build from.'
   },
   {
-    id: '5', title: 'V-Ray Realism', software: 'V-Ray', students: '48k',
-    description: 'Transform your SketchUp models into jaw-dropping photorealistic images. The industry standard for beauty shots that close deals.',
-    imageUrl: 'https://lh3.googleusercontent.com/d/1aHEt_z78tYD_0Cn66DiduAnhwn-o8El8',
-    learningPoints: ['Master realistic sunlight, night lighting & shadows', 'Create materials that look like real wood, glass & stone', 'Produce magazine-quality images that sell projects'],
-    workflowImpact: 'Watch clients gasp when they see their future home in photorealistic detail.'
+    id: '3', title: 'SketchUp 3D', software: 'SketchUp', students: '55k',
+    description: 'Build stunning 3D models from scratch — walls, furniture, kitchens, bathrooms. Turn your AutoCAD plans into immersive 3D designs.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1wl6by5AO5MiPeoYsZ8F6Zi5AJahoeTQo',
+    learningPoints: ['Build complete 3D interiors from a blank canvas', 'Apply textures, materials & furniture with confidence', 'Export professional scenes ready for D5 Render'],
+    workflowImpact: 'See your imagination come to life in 3D — no experience needed.'
   },
   {
     id: '7', title: 'D5 Render AI', software: 'D5 Render', students: '19k',

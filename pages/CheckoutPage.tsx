@@ -62,17 +62,17 @@ const CheckoutPage: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <p className="text-xs font-semibold text-gray-600 mt-2 text-center max-w-[200px]">🎨 SketchUp + V-Ray + D5 Render AI Bundle</p>
+        <p className="text-xs font-semibold text-gray-600 mt-2 text-center max-w-[200px]">🎨 AutoCAD + SketchUp + D5 Render AI Bundle</p>
       </div>
 
       <div className="checkout-card w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
         <div className="bg-black text-white px-6 py-5">
           <div className="flex items-center mb-1">
             <div className="inline-flex items-center gap-1.5 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
-              <Sparkles size={11} /> Rendering Pipeline
+              <Sparkles size={11} /> Plan-to-Render Pipeline
             </div>
           </div>
-          <h3 className="text-xl font-display font-bold mb-1">SketchUp + V-Ray + D5 Render</h3>
+          <h3 className="text-xl font-display font-bold mb-1">AutoCAD + SketchUp + D5 Render</h3>
           <div className="flex items-baseline gap-2">
             <span className="text-2xl font-display font-black">€{FRONT_END_PRICE}</span>
             <span className="text-gray-500 text-sm line-through">€{FRONT_END_ORIGINAL_PRICE}</span>

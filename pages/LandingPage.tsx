@@ -78,7 +78,7 @@ const LandingPage: React.FC = () => {
 
   const [timeLeft, setTimeLeft] = useState(() => { const D = (3 * 3600 + 36 * 60 + 20) * 1000, r = D - (Date.now() % D); return { h: Math.floor((r / 3600000) % 24), m: Math.floor((r / 60000) % 60), s: Math.floor((r / 1000) % 60) }; });
   const [showStickyBar, setShowStickyBar] = useState(false);
-  useEffect(() => { window.scrollTo(0, 0); if ((window as any).fbq) (window as any).fbq('track', 'ViewContent', { content_name: 'Avada Design — SketchUp + V-Ray + D5 Render AI', value: FRONT_END_PRICE, currency: 'USD' }); }, []);
+  useEffect(() => { window.scrollTo(0, 0); if ((window as any).fbq) (window as any).fbq('track', 'ViewContent', { content_name: 'Avada Design — AutoCAD + SketchUp + D5 Render AI', value: FRONT_END_PRICE, currency: 'EUR' }); }, []);
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const [studentCount, setStudentCount] = useState(22390);
 
@@ -415,20 +415,20 @@ const LandingPage: React.FC = () => {
               <h2 className="text-3xl md:text-5xl font-serif italic text-slate-900 mb-8 leading-snug">"We believe every designer deserves restaurant-quality tools at street-food prices."</h2>
             </div>
             <div className="reveal space-y-6 text-slate-600 text-base md:text-lg leading-relaxed">
-              <p>Learning SketchUp, V-Ray, and D5 Render separately? That's <strong className="text-slate-900">€300+ in courses, months of confusion, and a dozen browser tabs</strong> you'll never close.</p>
-              <p>We built this bundle because <strong className="text-orange-600">the rendering pipeline shouldn't be gatekept</strong>. Whether you're a student, a freelancer, or a studio owner — you deserve a clear, guided path from 3D model to photorealistic render.</p>
+              <p>Learning AutoCAD, SketchUp, and D5 Render separately? That's <strong className="text-slate-900">€300+ in courses, months of confusion, and a dozen browser tabs</strong> you'll never close.</p>
+              <p>We built this bundle because <strong className="text-orange-600">the design pipeline shouldn't be gatekept</strong>. Whether you're a student, a freelancer, or a studio owner — you deserve a clear, guided path from floor plan to photorealistic render.</p>
               <p>Every lesson is designed so you build <strong className="text-slate-900">real projects</strong>. Not theory. Not fluff. Actual rooms, actual renders, actual portfolio pieces.</p>
               
               <div className="my-10 bg-gradient-to-br from-orange-50 to-orange-50 border border-orange-200 rounded-2xl p-6 md:p-8 shadow-soft">
                 <p className="font-bold text-slate-900 text-xl mb-4">Here's What Makes This Bundle Special:</p>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3"><CheckCircle size={18} className="text-orange-500 shrink-0" /><span className="text-slate-800"><strong>SketchUp</strong> — Design stunning 3D models from scratch, even if you've never opened the software.</span></li>
-                  <li className="flex items-center gap-3"><CheckCircle size={18} className="text-orange-500 shrink-0" /><span className="text-slate-800"><strong>V-Ray</strong> — Turn those models into magazine-quality photorealistic images.</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle size={18} className="text-orange-500 shrink-0" /><span className="text-slate-800"><strong>AutoCAD</strong> — Plan professional 2D floor plans & layouts, even if you've never opened the software.</span></li>
+                  <li className="flex items-center gap-3"><CheckCircle size={18} className="text-orange-500 shrink-0" /><span className="text-slate-800"><strong>SketchUp</strong> — Design stunning 3D models from your plans, with textures and furniture.</span></li>
                   <li className="flex items-center gap-3"><CheckCircle size={18} className="text-orange-500 shrink-0" /><span className="text-slate-800"><strong>D5 Render AI</strong> — Real-time AI rendering: see changes instantly, generate 4K images in seconds.</span></li>
                   <li className="flex items-center gap-3"><CheckCircle size={18} className="text-orange-500 shrink-0" /><span className="text-slate-800">24/7 support, free software links, and a community that's always got your back.</span></li>
                 </ul>
                 <div className="mt-6 pt-6 border-t border-orange-100 flex items-center justify-between">
-                  <span className="text-slate-600 text-sm italic font-bold">The complete design-to-render ecosystem for just €{FRONT_END_PRICE}.</span>
+                  <span className="text-slate-600 text-sm italic font-bold">The complete planning-to-render ecosystem for just €{FRONT_END_PRICE}.</span>
                   <button onClick={openPaymentModal} className="text-orange-600 font-bold text-sm hover:text-orange-600 flex items-center gap-1 group">Get Started <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" /></button>
                 </div>
               </div>
@@ -458,7 +458,7 @@ const LandingPage: React.FC = () => {
               <div className="reveal bg-gradient-to-br from-orange-50 to-slate-50 border border-orange-200 rounded-2xl p-8 shadow-soft">
                 <div className="flex items-center gap-3 mb-6"><div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center"><CheckCircle size={20} className="text-orange-600" /></div><h3 className="text-xl font-bold text-slate-900">The €{FRONT_END_PRICE} Bundle</h3></div>
                 <ul className="space-y-4">
-                  {['SketchUp: Build 3D models from floor plans in minutes', 'V-Ray: One-click photorealistic lighting, materials & shadows', 'D5 Render AI: Real-time renders — see it as you design it', 'All software links provided — no expensive licenses needed', '24/7 team support — stuck on a render? We fix it with you'].map((item, i) => (
+                  {['AutoCAD: Draw professional floor plans & layouts in minutes', 'SketchUp: Build stunning 3D models from your plans', 'D5 Render AI: Real-time renders — see it as you design it', 'All software links provided — no expensive licenses needed', '24/7 team support — stuck on a render? We fix it with you'].map((item, i) => (
                     <li key={i} className="flex items-start gap-3 text-slate-700 text-sm"><CheckCircle size={14} className="text-orange-500 mt-1 shrink-0" />{item}</li>
                   ))}
                 </ul>
@@ -534,7 +534,7 @@ const LandingPage: React.FC = () => {
           <div className="max-w-3xl mx-auto px-4 md:px-5">
             <div className="text-center mb-6 md:mb-8">
               <h3 className="text-xl md:text-3xl font-display font-bold text-slate-900 mb-2">Your future portfolio is one click away.</h3>
-              <p className="text-slate-500 text-xs md:text-sm">50,000+ students chose this path. SketchUp + V-Ray + D5 Render AI for €{FRONT_END_PRICE}. Lifetime access. Zero risk.</p>
+              <p className="text-slate-500 text-xs md:text-sm">50,000+ students chose this path. AutoCAD + SketchUp + D5 Render AI for €{FRONT_END_PRICE}. Lifetime access. Zero risk.</p>
             </div>
             <CtaWithTimer timeLeft={timeLeft} onClick={openPaymentModal} variant="dark" />
           </div>

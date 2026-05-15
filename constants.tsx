@@ -76,7 +76,7 @@ const RAW_COURSES: Course[] = [
     learningPoints: [
       'Build 3D rooms, kitchens & full homes from a blank canvas',
       'Apply realistic textures, furniture & materials',
-      'Export scenes ready for V-Ray & D5 Render'
+      'Export scenes ready for D5 Render'
     ],
     workflowImpact: 'Model their dream kitchen or bedroom in just minutes.'
   },
@@ -230,8 +230,8 @@ export const COURSES = RAW_COURSES.map(course => {
   return { ...course, imageUrl: url };
 });
 
-// ─── FRONT-END OFFER: SketchUp + V-Ray + D5 Render ───
-export const FRONT_END_IDS = ['3', '5', '7'];
+// ─── FRONT-END OFFER: AutoCAD + SketchUp + D5 Render ───
+export const FRONT_END_IDS = ['1', '3', '7'];
 export const FRONT_END_COURSES = COURSES.filter(c => FRONT_END_IDS.includes(c.id));
 
 // ─── UPSELL: Everything else ───
