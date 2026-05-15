@@ -136,6 +136,9 @@ const LandingPage: React.FC = () => {
                   <span className="text-slate-600">Design</span> &{' '}
                   <span className="text-slate-600">Rendering</span>{' '}matter the most.
                 </span>
+                <span className="block text-xs md:text-sm font-black text-slate-900 mt-2">
+                  We teach you all 3 at par with industry standards.
+                </span>
 
                 {/* Hook */}
                 <span className="block text-2xl leading-snug md:text-[2.6rem] font-display font-black text-slate-900 mb-1">
