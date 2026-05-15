@@ -21,7 +21,7 @@ const RenderUpsellPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Render Upsell", value: FRONT_END_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Render Upsell", value: FRONT_END_PRICE, currency: "EUR" });
   }, []);
 
   useEffect(() => {
@@ -43,13 +43,13 @@ const RenderUpsellPage: React.FC = () => {
   const f = (v: number) => v.toString().padStart(2, "0");
 
   const handleSuccess = (newCustomerId?: string, newPaymentMethodId?: string) => {
-    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: FRONT_END_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: FRONT_END_PRICE, currency: "EUR" });
     sendStageEmail(email, 'render');
-    navigate("/onetime", { state: { customerId: newCustomerId ?? customerId, paymentMethodId: newPaymentMethodId ?? paymentMethodId, email } });
+    navigate("/onetime", { state: { customerId: newCustomerId ?? customerId, paymentMethodId: newPaymentMethodId ?? paymentMethodId, email, purchased: ['render'] } });
   };
 
   const handleSkip = () => {
-    navigate("/onetime", { state: { customerId, paymentMethodId, email } });
+    navigate("/onetime", { state: { customerId, paymentMethodId, email, purchased: [] } });
   };
 
   const executeUpsell = async () => {
@@ -86,7 +86,7 @@ const RenderUpsellPage: React.FC = () => {
             <div className="bg-red-50 border border-red-200 rounded-2xl p-6 text-center mt-4">
               <h4 className="text-red-700 font-bold text-lg mb-2">Are you sure?</h4>
               <p className="text-gray-700 text-sm mb-5">
-                This discount will not be available again. You can still buy later, but at the full regular price (€${FRONT_END_ORIGINAL_PRICE}).
+                This discount will not be available again. You can still buy later, but at the full regular price (€{FRONT_END_ORIGINAL_PRICE}).
               </p>
               <div className="space-y-3">
                 <button

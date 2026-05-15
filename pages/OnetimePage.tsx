@@ -14,6 +14,7 @@ const OnetimePage: React.FC = () => {
   const paymentMethodId = location.state?.paymentMethodId;
   const paymentIntentId = location.state?.paymentIntentId;
   const emailFromState = location.state?.email ?? '';
+  const prevPurchased: string[] = location.state?.purchased ?? ['render'];
   const [timeLeft, setTimeLeft] = useState({ m: 9, s: 59 });
   const [email, setEmail] = useState(emailFromState);
   const [showPayment, setShowPayment] = useState(false);
@@ -23,7 +24,7 @@ const OnetimePage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Upsell", value: UPSELL_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Upsell", value: UPSELL_PRICE, currency: "EUR" });
   }, []);
 
   // 15-minute countdown timer (resets on page load)
@@ -46,13 +47,13 @@ const OnetimePage: React.FC = () => {
   const f = (v: number) => v.toString().padStart(2, "0");
 
   const handleSuccess = (newCustomerId?: string, newPaymentMethodId?: string) => {
-    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: UPSELL_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: UPSELL_PRICE, currency: "EUR" });
     sendStageEmail(email, 'full');
-    navigate("/offer", { state: { customerId: newCustomerId ?? customerId, paymentMethodId: newPaymentMethodId ?? paymentMethodId, paymentIntentId, email } });
+    navigate("/offer", { state: { customerId: newCustomerId ?? customerId, paymentMethodId: newPaymentMethodId ?? paymentMethodId, paymentIntentId, email, purchased: [...prevPurchased, 'full'] } });
   };
 
   const handleSkip = () => {
-    navigate("/offer", { state: { customerId, paymentMethodId, paymentIntentId, email } });
+    navigate("/offer", { state: { customerId, paymentMethodId, paymentIntentId, email, purchased: prevPurchased } });
   };
 
   const handleCTA = async () => {
@@ -377,7 +378,7 @@ const OnetimePage: React.FC = () => {
             <button onClick={() => setIsConfirmingSkip(false)} className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><X size={20}/></button>
             <h4 className="text-red-700 font-bold text-2xl mb-2 mt-4">Are you sure?</h4>
             <p className="text-gray-700 text-base mb-6">
-              This 86% discount will not be available again. You can still buy this later, but it will be at the full regular price (€${UPSELL_ORIGINAL_PRICE}).
+              This 86% discount will not be available again. You can still buy this later, but it will be at the full regular price (€{UPSELL_ORIGINAL_PRICE}).
             </p>
             <div className="space-y-3">
               <button
@@ -389,7 +390,7 @@ const OnetimePage: React.FC = () => {
               </button>
               <button
                 disabled={isProcessingUpSell}
-                onClick={() => navigate("/offer", { state: { customerId, paymentMethodId, email } })}
+                onClick={() => navigate("/offer", { state: { customerId, paymentMethodId, email, purchased: prevPurchased } })}
                 className="block w-full py-3 text-center text-red-500 hover:text-red-700 text-sm font-bold transition-colors underline underline-offset-4 decoration-red-200"
               >
                 Cancel, I don't want it

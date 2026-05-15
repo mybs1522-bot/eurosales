@@ -79,6 +79,25 @@ export const chargeSavedCardUpsell = async (customerId: string, amount: string =
   return true;
 };
 
+export const getAccessLinks = async (products: string[]): Promise<Record<string, string>> => {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/functions/v1/get-access-links`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+        apikey: SUPABASE_ANON_KEY,
+      },
+      body: JSON.stringify({ products }),
+    });
+    const data = await res.json();
+    return data.links ?? {};
+  } catch (err) {
+    console.error('[getAccessLinks] failed:', err);
+    return {};
+  }
+};
+
 export const sendAccessEmail = async (email: string): Promise<void> => {
   if (!email) return;
   try {

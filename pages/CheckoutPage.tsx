@@ -16,7 +16,7 @@ const CheckoutPage: React.FC = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Checkout", value: FRONT_END_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Checkout", value: FRONT_END_PRICE, currency: "EUR" });
   }, []);
 
   useEffect(() => {
@@ -32,9 +32,9 @@ const CheckoutPage: React.FC = () => {
 
   const handleSuccess = (customerId?: string, paymentMethodId?: string, paymentIntentId?: string) => {
     console.log('[CheckoutPage] Payment succeeded. customerId:', customerId, 'paymentMethodId:', paymentMethodId, 'paymentIntentId:', paymentIntentId);
-    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: FRONT_END_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: FRONT_END_PRICE, currency: "EUR" });
     sendStageEmail(email, 'render');
-    navigate("/onetime", { state: { customerId, paymentMethodId, paymentIntentId, email } });
+    navigate("/onetime", { state: { customerId, paymentMethodId, paymentIntentId, email, purchased: ['render'] } });
   };
 
   return (
