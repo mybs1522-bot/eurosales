@@ -104,88 +104,59 @@ const LandingPage: React.FC = () => {
         <p className="text-xs md:text-sm font-bold tracking-wide">Now available in Europe</p>
       </div>
 
-      {/* ═══ STICKY HEADER ═══ */}
-      <header className="sticky top-0 z-[60] bg-white/80 backdrop-blur-2xl border-b border-slate-100/60 px-5 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Logo />
-          <div className="flex items-center gap-4">
-            <button onClick={openPaymentModal} className="text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-all premium-stroke" style={{ background: 'linear-gradient(135deg,#f97316,#ea580c)', boxShadow: '0 0 20px rgba(249,115,22,0.45)' }}>Get Access — €{FRONT_END_PRICE}</button>
-          </div>
-        </div>
-      </header>
-
       <main>
         {/* 1. HERO — The Primary Pitch */}
         <section className="relative pt-0 pb-6 md:pb-16 overflow-hidden" style={{ background: '#ffffff' }}>
           <div className="w-full px-4 md:max-w-3xl md:mx-auto relative z-10">
-            <div className="flex flex-col items-center text-center pt-7 md:pt-14">
+            <div className="flex flex-col items-center text-center pt-4 md:pt-8">
 
               {/* Badge */}
-              <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 bg-orange-50 border border-orange-300 rounded-full shadow-sm">
-                <Sparkles size={12} className="text-orange-500" />
-                <span className="text-[11px] md:text-xs font-bold text-orange-700 uppercase tracking-widest">For Architects & Interior Designers</span>
+              <div className="mb-5 inline-flex items-center px-3 py-2 sm:px-6 sm:py-2.5 bg-slate-900 rounded-full shadow-sm">
+                <span className="text-[9px] min-[370px]:text-[11px] sm:text-sm md:text-base font-bold text-white tracking-wide whitespace-nowrap">Start charging €500-€1,500 for designing and rendering.</span>
               </div>
 
               {/* Headline */}
-              <h1 className="tracking-tight mb-5 md:mb-6 w-full">
-
-                {/* Industry truth */}
-                <span className="block text-[11px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">
-                  In Architecture & Design —{' '}
-                  <span className="text-slate-600">Planning</span>,{' '}
-                  <span className="text-slate-600">Design</span> &{' '}
-                  <span className="text-slate-600">Rendering</span>{' '}matter the most.
+              <h1 className="tracking-tight mb-5 w-full flex flex-col items-center">
+                <span className="block text-5xl md:text-7xl font-display font-bold text-slate-900 mb-1">
+                  Learn to Design
                 </span>
-
-                {/* Hook */}
-                <span className="block text-2xl leading-snug md:text-[2.6rem] font-display font-black text-slate-900 mb-1">
-                  The question isn't <em className="font-serif font-normal not-italic text-slate-500">if</em> you can.
+                <span className="block text-[1.65rem] min-[380px]:text-3xl sm:text-5xl md:text-7xl font-display font-bold text-emerald-600 mb-2 whitespace-nowrap">
+                  Homes, Offices <span className="font-serif italic font-normal text-slate-600">&</span> Villas
                 </span>
-                <span className="block text-2xl leading-snug md:text-[2.6rem] font-display font-black text-slate-900 mb-6">
-                  It's —{' '}
-                  <span className="relative inline-block">
-                    <span className="text-orange-500">How to do it FASTER?</span>
-                    <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-orange-200 rounded-full"></span>
-                  </span>
+                <span className="block text-xl md:text-2xl font-serif italic text-slate-600 mb-4">
+                  and show real 3D to clients.
                 </span>
-
-                {/* Divider */}
-                <span className="block w-10 h-[2px] bg-orange-300 rounded-full mx-auto mb-5"></span>
-
-                {/* Identity */}
-                <span className="block text-[1.65rem] leading-tight md:text-5xl font-display font-black text-slate-900 mb-1">
-                  If You Want to Design{' '}
-                  <span className="text-orange-500">Homes. Villas. Offices.</span>
+                
+                <span className="block text-[11px] min-[390px]:text-xs sm:text-xl md:text-2xl font-bold text-slate-900 mb-1 whitespace-nowrap">
+                  Learn PDR — Planning, Designing & Rendering
                 </span>
-                <span className="block text-[1.5rem] leading-tight md:text-4xl font-display font-black text-slate-700 mb-4">
-                  Design Them in a Way<br />
-                  <span className="text-orange-500">the Industry Can't Ignore.</span>
+                <span className="block text-base md:text-lg text-slate-600 font-medium">
+                  One bundle. Everything included.
                 </span>
-
-                {/* Consequence */}
-                <span className="block text-sm md:text-base text-slate-500 font-medium leading-relaxed max-w-lg mx-auto">
-                  Because that's the only way you can{' '}
-                  <strong className="text-slate-800">make money</strong> in this{' '}
-                  <strong className="text-orange-500">AI era.</strong>
-                </span>
-
               </h1>
 
-              {/* Zero-knowledge note */}
-              <div className="w-full mb-5 flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-4 py-4 text-left">
-                <span className="text-xl shrink-0 mt-0.5">💻</span>
-                <div>
-                  <p className="text-sm font-black text-slate-900 mb-0.5">No prior knowledge needed. Zero.</p>
-                  <p className="text-xs md:text-sm text-slate-500 leading-relaxed">
-                    Never opened SketchUp? Never rendered anything? That's totally fine — we start from scratch. All you need is a <strong className="text-slate-700">laptop or PC</strong> and we'll take care of the rest.
-                  </p>
+              {/* Box Content */}
+              <div className="w-full bg-white border border-slate-200 rounded-3xl p-6 md:p-10 shadow-sm text-left mb-4 max-w-4xl mx-auto">
+                <p className="text-slate-700 text-lg md:text-xl italic mb-4 font-serif">
+                  "In our business of Architecture and Design, <strong className="text-slate-900 font-bold not-italic font-sans">Planning, Design and Rendering</strong> <span className="italic">matter the most.</span>"
+                </p>
+                <p className="text-slate-700 text-lg md:text-xl mb-2 font-medium">
+                  The question isn't <em className="italic font-serif">if</em> you can. It's...
+                </p>
+                <p className="text-red-700 text-2xl md:text-3xl font-black tracking-tight mb-5">
+                  How to do it FASTER?
+                </p>
+
+                {/* Hero Video */}
+                <div className="w-full mb-4 overflow-hidden rounded-2xl bg-slate-900 shadow-xl" style={{ position: 'relative', paddingTop: '56.25%' }}>
+                  <iframe src="https://iframe.mediadelivery.net/embed/494628/1f7b76dd-7d47-4f39-87af-bff5a6b02d08?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style={{ border: 0, position: 'absolute', top: 0, height: '100%', width: '100%' }} allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;" allowFullScreen={true} />
                 </div>
+
+                <p className="text-slate-900 font-bold text-center text-lg md:text-xl">
+                  Learn Complete Interior & Exterior Design in one package.
+                </p>
               </div>
 
-              {/* Hero Video */}
-              <div className="w-full mb-5 overflow-hidden rounded-2xl shadow-2xl border border-slate-100" style={{ position: 'relative', paddingTop: '56.25%' }}>
-                <iframe src="https://iframe.mediadelivery.net/embed/489113/a214b199-e64a-4eaf-af70-edfbc586e5fd?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style={{ border: 0, position: 'absolute', top: 0, height: '100%', width: '100%' }} allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowFullScreen={true} />
-              </div>
 
               {/* Post-video hook */}
               <div className="w-full mb-6 text-center">
@@ -281,6 +252,17 @@ const LandingPage: React.FC = () => {
           </div>
         </section>
 
+
+        {/* 10,000+ DESIGNERS COMMUNITY */}
+        <section className="py-16 md:py-20 bg-slate-50 border-b border-slate-200 text-center">
+          <div className="max-w-5xl mx-auto px-5">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 tracking-tight mb-8">10,000+ <span className="text-orange-600">Designers Community</span></h2>
+            <div className="flex flex-col gap-8 md:gap-12 items-center">
+              <img src="/community1.jpg" alt="Community 1" className="w-full max-w-4xl rounded-2xl shadow-xl" />
+              <img src="/community2.jpg" alt="Community 2" className="w-full max-w-4xl rounded-2xl shadow-xl" />
+            </div>
+          </div>
+        </section>
 
         {/* AI ENHANCEMENT — Visual Proof */}
         <section className="py-16 md:py-20 bg-white border-b border-slate-200">

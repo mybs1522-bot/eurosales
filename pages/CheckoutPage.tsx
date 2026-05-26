@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FRONT_END_COURSES, FRONT_END_PRICE, FRONT_END_ORIGINAL_PRICE } from "../constants";
-import { Sparkles, Timer, CheckCircle2, Download, Mail, Lock, Check, X, ArrowLeft } from "lucide-react";
+import { Sparkles, Timer, CheckCircle2, Download, Mail, Lock, Check, X, ArrowLeft, Plus } from "lucide-react";
 import ModernPaymentForm from "../components/ui/modern-payment-form";
 import { useNavigate } from "react-router-dom";
 import { sendStageEmail } from "../services/email";
+
+const AUTOCAD_PRICE = 9;
 
 const CheckoutPage: React.FC = () => {
   const navigate = useNavigate();
@@ -11,12 +13,15 @@ const CheckoutPage: React.FC = () => {
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
   const [studentCount, setStudentCount] = useState(22847);
+  const [autocadAddon, setAutocadAddon] = useState(false);
+
+  const totalPrice = FRONT_END_PRICE + (autocadAddon ? AUTOCAD_PRICE : 0);
 
   useEffect(() => { const t = setInterval(() => setStudentCount(c => c + 1), 4000); return () => clearInterval(t); }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Checkout", value: FRONT_END_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "ViewContent", { content_name: "Avada Checkout", value: totalPrice, currency: "USD" });
   }, []);
 
   useEffect(() => {
@@ -32,9 +37,9 @@ const CheckoutPage: React.FC = () => {
 
   const handleSuccess = (customerId?: string, paymentMethodId?: string, paymentIntentId?: string) => {
     console.log('[CheckoutPage] Payment succeeded. customerId:', customerId, 'paymentMethodId:', paymentMethodId, 'paymentIntentId:', paymentIntentId);
-    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: FRONT_END_PRICE, currency: "USD" });
+    if ((window as any).fbq) (window as any).fbq("track", "Purchase", { value: totalPrice, currency: "USD" });
     sendStageEmail(email, 'render');
-    navigate("/onetime", { state: { customerId, paymentMethodId, paymentIntentId, email } });
+    navigate("/onetime", { state: { customerId, paymentMethodId, paymentIntentId, email, autocadAddon } });
   };
 
   return (
@@ -92,6 +97,60 @@ const CheckoutPage: React.FC = () => {
             </div>
           </div>
 
+          {/* ═══ AutoCAD Add-on ═══ */}
+          <div
+            onClick={() => setAutocadAddon(!autocadAddon)}
+            className={`relative cursor-pointer rounded-2xl border-2 p-4 mb-5 transition-all duration-300 ${
+              autocadAddon
+                ? 'border-orange-500 bg-orange-50 shadow-md shadow-orange-500/10'
+                : 'border-gray-200 bg-gray-50 hover:border-gray-300 hover:bg-gray-100'
+            }`}
+          >
+            {/* Top-right badge */}
+            <div className="absolute -top-2.5 right-4">
+              <span className="bg-orange-500 text-white text-[9px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow-sm">
+                Add-On
+              </span>
+            </div>
+
+            <div className="flex items-start gap-3">
+              {/* Checkbox */}
+              <div className={`mt-0.5 w-5 h-5 rounded-md border-2 flex items-center justify-center shrink-0 transition-all ${
+                autocadAddon ? 'bg-orange-500 border-orange-500' : 'border-gray-300 bg-white'
+              }`}>
+                {autocadAddon && <Check size={13} className="text-white" strokeWidth={3} />}
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="text-lg">📐</span>
+                  <h4 className="text-sm font-black text-gray-900 leading-tight">AutoCAD</h4>
+                </div>
+                <p className="text-xs font-bold text-gray-700 leading-snug mb-2">
+                  Complete Planning & Floor Plans Course
+                </p>
+                <p className="text-[10px] text-gray-500 leading-relaxed">
+                  Master professional floor plans, site plans & construction drawings. The perfect companion to your 3D workflow.
+                </p>
+              </div>
+
+              {/* Price */}
+              <div className="text-right shrink-0">
+                <span className="text-xl font-display font-black text-orange-600">+€{AUTOCAD_PRICE}</span>
+              </div>
+            </div>
+
+            {autocadAddon && (
+              <div className="mt-3 pt-3 border-t border-orange-200 flex items-center justify-between">
+                <span className="text-[10px] font-bold text-orange-700 uppercase tracking-wider">✓ Added to your order</span>
+                <span className="text-xs font-black text-gray-900">
+                  New total: €{totalPrice}
+                </span>
+              </div>
+            )}
+          </div>
+
           <div className="bg-gray-50 rounded-xl px-4 py-2.5 mb-5 flex items-center justify-between border border-gray-200">
             <div className="flex items-center gap-2">
               <Timer size={13} className="text-gray-700 animate-pulse" />
@@ -116,7 +175,7 @@ const CheckoutPage: React.FC = () => {
           </div>
           {emailError && <p className="text-red-500 text-[10px] mb-2 font-bold">Enter a valid email address</p>}
 
-          <ModernPaymentForm bare email={email} onSuccess={handleSuccess} amount={`€${FRONT_END_PRICE}`} />
+          <ModernPaymentForm bare email={email} onSuccess={handleSuccess} amount={`€${totalPrice}`} />
 
           <div className="flex items-center justify-center gap-1.5 mt-4 text-[11px] text-gray-500 font-medium text-center">
             🎓 Skill Certificate will be automatically mailed after you complete the course.
