@@ -107,7 +107,7 @@ const LandingPage: React.FC = () => {
       <main>
         {/* 1. HERO — The Primary Pitch */}
         <section className="relative pt-0 pb-6 md:pb-16 overflow-hidden" style={{ background: '#ffffff' }}>
-          <div className="w-full px-4 md:max-w-3xl md:mx-auto relative z-10">
+          <div className="w-full px-0 md:px-4 md:max-w-3xl md:mx-auto relative z-10">
             <div className="flex flex-col items-center text-center pt-4 md:pt-8">
 
               {/* Badge */}
@@ -116,43 +116,43 @@ const LandingPage: React.FC = () => {
               </div>
 
               {/* Headline */}
-              <h1 className="tracking-tight mb-5 w-full flex flex-col items-center">
-                <span className="block text-5xl md:text-7xl font-display font-bold text-slate-900 mb-1">
+              <h1 className="tracking-tight mb-4 w-full flex flex-col items-center">
+                <span className="block text-3xl md:text-5xl font-display font-bold text-slate-900 mb-1">
                   Learn to Design
                 </span>
-                <span className="block text-[1.65rem] min-[380px]:text-3xl sm:text-5xl md:text-7xl font-display font-bold text-emerald-600 mb-2 whitespace-nowrap">
+                <span className="block text-[1.4rem] min-[380px]:text-2xl sm:text-4xl md:text-5xl font-display font-bold text-emerald-600 mb-1 whitespace-nowrap">
                   Homes, Offices <span className="font-serif italic font-normal text-slate-600">&</span> Villas
                 </span>
-                <span className="block text-xl md:text-2xl font-serif italic text-slate-600 mb-4">
+                <span className="block text-base md:text-lg font-serif italic text-slate-600 mb-3">
                   and show real 3D to clients.
                 </span>
                 
-                <span className="block text-[11px] min-[390px]:text-xs sm:text-xl md:text-2xl font-bold text-slate-900 mb-1 whitespace-nowrap">
+                <span className="block text-[11px] min-[390px]:text-xs sm:text-base md:text-lg font-bold text-slate-900 mb-0.5 whitespace-nowrap">
                   Learn PDR — Planning, Designing & Rendering
                 </span>
-                <span className="block text-base md:text-lg text-slate-600 font-medium">
+                <span className="block text-sm md:text-base text-slate-600 font-medium">
                   One bundle. Everything included.
                 </span>
               </h1>
 
               {/* Box Content */}
-              <div className="w-full bg-white border border-slate-200 rounded-3xl p-6 md:p-10 shadow-sm text-left mb-4 max-w-4xl mx-auto">
-                <p className="text-slate-700 text-lg md:text-xl italic mb-4 font-serif">
+              <div className="w-full bg-white border border-slate-200 rounded-2xl p-4 md:p-8 shadow-sm text-left mb-4 max-w-4xl mx-auto">
+                <p className="text-slate-700 text-sm md:text-base italic mb-3 font-serif">
                   "In our business of Architecture and Design, <strong className="text-slate-900 font-bold not-italic font-sans">Planning, Design and Rendering</strong> <span className="italic">matter the most.</span>"
                 </p>
-                <p className="text-slate-700 text-lg md:text-xl mb-2 font-medium">
+                <p className="text-slate-700 text-sm md:text-base mb-1 font-medium">
                   The question isn't <em className="italic font-serif">if</em> you can. It's...
                 </p>
-                <p className="text-red-700 text-2xl md:text-3xl font-black tracking-tight mb-5">
+                <p className="text-red-700 text-xl md:text-2xl font-black tracking-tight mb-4">
                   How to do it FASTER?
                 </p>
 
                 {/* Hero Video */}
-                <div className="w-full mb-4 overflow-hidden rounded-2xl bg-slate-900 shadow-xl" style={{ position: 'relative', paddingTop: '56.25%' }}>
+                <div className="w-full mb-3 overflow-hidden rounded-2xl bg-slate-900 shadow-xl" style={{ position: 'relative', paddingTop: '56.25%' }}>
                   <iframe src="https://iframe.mediadelivery.net/embed/494628/1f7b76dd-7d47-4f39-87af-bff5a6b02d08?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style={{ border: 0, position: 'absolute', top: 0, height: '100%', width: '100%' }} allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;fullscreen;" allowFullScreen={true} />
                 </div>
 
-                <p className="text-slate-900 font-bold text-center text-lg md:text-xl">
+                <p className="text-slate-900 font-bold text-center text-sm md:text-base">
                   Learn Complete Interior & Exterior Design in one package.
                 </p>
               </div>
