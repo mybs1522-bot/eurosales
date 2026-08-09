@@ -53,7 +53,7 @@ const CtaWithTimer = ({ timeLeft, onClick, variant = 'green' }: { timeLeft: { h:
         <div className="flex items-baseline gap-2">
           <span className={`text-sm ${variant === 'dark' ? 'text-slate-500' : 'text-slate-400'} line-through font-bold`}>€{FRONT_END_ORIGINAL_PRICE}</span>
           <span className={`text-3xl font-display font-black ${variant === 'dark' ? 'text-white' : 'text-slate-900'}`}>€{FRONT_END_PRICE}</span>
-          <span className="bg-orange-100 text-orange-500 text-[9px] font-bold px-1.5 py-0.5 rounded-full">91% OFF</span>
+          <span className="bg-orange-100 text-orange-500 text-[9px] font-bold px-1.5 py-0.5 rounded-full">{Math.round((1 - FRONT_END_PRICE / FRONT_END_ORIGINAL_PRICE) * 100)}% OFF</span>
         </div>
 
         {/* Button */}

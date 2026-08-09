@@ -76,7 +76,7 @@ const CheckoutPage: React.FC = () => {
           <div className="flex items-baseline gap-2">
             <span className="text-2xl font-display font-black">€{FRONT_END_PRICE}</span>
             <span className="text-gray-500 text-sm line-through">€{FRONT_END_ORIGINAL_PRICE}</span>
-            <span className="bg-white/10 text-white text-xs font-bold px-2 py-0.5 rounded-full border border-white/20">91% OFF</span>
+            <span className="bg-white/10 text-white text-xs font-bold px-2 py-0.5 rounded-full border border-white/20">{Math.round((1 - FRONT_END_PRICE / FRONT_END_ORIGINAL_PRICE) * 100)}% OFF</span>
           </div>
         </div>
 
