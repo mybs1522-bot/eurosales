@@ -39,7 +39,7 @@ serve(async (req: Request) => {
 
   try {
     const { email, amount, currency, paymentIntentId } = await req.json();
-    let numericAmount = 900; // default $9
+    let numericAmount = 4900; // default €49
     if (amount) {
       const cleanAmount = amount.replace(/[^0-9.]/g, '');
       numericAmount = Math.round(parseFloat(cleanAmount) * 100);

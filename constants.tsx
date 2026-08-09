@@ -20,8 +20,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://lh3.googleusercontent.com/d/1aHEt_z78tYD_0Cn66DiduAnhwn-o8El8',
     color: 'from-blue-600 to-indigo-500',
     students: '48k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Master realistic sunlight, night lighting & shadows',
       'Create materials that look like real wood, glass & stone',
@@ -37,8 +37,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1fV5bz4JDugh8HxLMJ0fXu5K5sDj3qlSR/view?usp=drive_link',
     color: 'from-red-500 to-red-400',
     students: '42.5k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Draw floor plans and furniture layouts easily',
       'Print your drawings to scale for construction',
@@ -54,8 +54,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1N_BbG9kAEwIk541Id53_RV0CWjO1jzAt/view?usp=drive_link',
     color: 'from-red-600 to-red-500',
     students: '38k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Create 3D buildings with automatic floor plans',
       'Calculate how many bricks and windows you need',
@@ -71,8 +71,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1wl6by5AO5MiPeoYsZ8F6Zi5AJahoeTQo/view?usp=drive_link',
     color: 'from-blue-500 to-cyan-400',
     students: '55k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Build 3D rooms, kitchens & full homes from a blank canvas',
       'Apply realistic textures, furniture & materials',
@@ -88,8 +88,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1DgmIvkeC2dxGpRpzbIthHQsSdlCty2Xg/view?usp=drive_link',
     color: 'from-cyan-600 to-blue-500',
     students: '22k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Model complex shapes like twisted towers',
       'Create soft fabrics, pillows, and blankets',
@@ -105,8 +105,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1XW2DDHVa1Qc15NcZ3wUKMFRT7LkyZMCt/view?usp=drive_link',
     color: 'from-teal-500 to-emerald-400',
     students: '31k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Add grass, trees, and water instantly',
       'Make people walk and cars drive in your scene',
@@ -122,8 +122,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1vbV4j6K9sgzbbZ7qlRdgqPTXWiHBPLsr/view?usp=drive_link',
     color: 'from-purple-500 to-pink-500',
     students: '19k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Real-time AI rendering — see changes as you make them',
       'AI-assisted lighting, materials & scene composition',
@@ -139,8 +139,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1SmezP6LwT3yo9aE3oivpGkqS-xycSOyx/view?usp=drive_link',
     color: 'from-blue-500 to-indigo-600',
     students: '25k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'One-click to start walking inside your model',
       'Send a web link so clients can walk around too',
@@ -156,8 +156,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1s-HzZVKpc9F92mLW2gMOPk0kVrKAqUIS/view?usp=drive_link',
     color: 'from-fuchsia-600 to-purple-600',
     students: '60k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'How to write text to get amazing house images',
       'Create mood boards for clients instantly',
@@ -173,8 +173,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1xSzSjuL4imlbXwEYMwKw_vhuueDcFtHm/view?usp=drive_link',
     color: 'from-indigo-500 to-purple-500',
     students: '15k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Turn hand sketches into realistic renders',
       'Change specific parts of an image with AI',
@@ -190,8 +190,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/14EfKoC7BfxXmYxd6t6qIE470yQaX0toW/view?usp=drive_link',
     color: 'from-gray-600 to-gray-400',
     students: '18k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Create interactive lights and doors',
       'Make realistic fire, water, and wind',
@@ -207,8 +207,8 @@ const RAW_COURSES: Course[] = [
     imageUrl: 'https://drive.google.com/file/d/1FkzIhdu7K5JeRFq7BM1wGV5MND_fLMKe/view?usp=drive_link',
     color: 'from-blue-800 to-blue-600',
     students: '72k',
-    price: 9,
-    originalPrice: 49,
+    price: 49,
+    originalPrice: 99,
     learningPoints: [
       'Fix lighting and colors easily',
       'Add realistic people and trees',
@@ -237,7 +237,7 @@ export const FRONT_END_COURSES = COURSES.filter(c => FRONT_END_IDS.includes(c.id
 // ─── UPSELL: Everything else ───
 export const UPSELL_COURSES = COURSES.filter(c => !FRONT_END_IDS.includes(c.id));
 
-export const FRONT_END_PRICE = 9;
+export const FRONT_END_PRICE = 49;
 export const FRONT_END_ORIGINAL_PRICE = 99;
 export const UPSELL_PRICE = 27;
 export const UPSELL_ORIGINAL_PRICE = 199;
@@ -353,7 +353,7 @@ export const PRICING_PLANS = [
     id: 'lifetime-basic',
     duration: 'Lifetime Access',
     period: 'One-time payment',
-    price: '€9',
+    price: '€49',
     originalPrice: '€99',
     label: 'Best Value'
   }
@@ -364,7 +364,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'James Carter',
     role: 'Senior Architect',
     location: 'New York, USA',
-    content: 'Having SketchUp, V-Ray and D5 Render in one bundle changed how our entire studio works. We model, render, and present — all from this €9 course.'
+    content: 'Having SketchUp, V-Ray and D5 Render in one bundle changed how our entire studio works. We model, render, and present — all from this €49 course.'
   },
   {
     name: 'Sophie Laurent',
@@ -388,7 +388,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Olivia Brooks',
     role: 'Interior Designer',
     location: 'Sydney, Australia',
-    content: 'I can model a room in SketchUp, render it in V-Ray, and show 10 variations in D5 — all in the time it used to take for one basic drawing. Best €9 ever.'
+    content: 'I can model a room in SketchUp, render it in V-Ray, and show 10 variations in D5 — all in the time it used to take for one basic drawing. Best €49 ever.'
   },
   {
     name: 'Marco Rossi',
@@ -400,7 +400,7 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    question: "What exactly do I get for €9?",
+    question: "What exactly do I get for €49?",
     answer: "You get 3 complete courses: SketchUp Pro (3D modeling), V-Ray Photorealism (beauty shots), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software links, a certified diploma, and 24/7 team support. Lifetime access."
   },
   {

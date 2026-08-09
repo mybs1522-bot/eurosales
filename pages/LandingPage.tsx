@@ -231,6 +231,26 @@ const LandingPage: React.FC = () => {
               </button>
               <p className="text-[11px] md:text-xs text-slate-400 mt-3 font-medium">24/7 Support • Free AI Software • 7-Day Money-Back Guarantee</p>
 
+              {/* Banners Below First CTA */}
+              <div className="w-full mt-8 flex flex-col gap-6">
+                <div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border border-slate-100 transition-all hover:shadow-2xl">
+                  <img 
+                    src="/learn-design-spaces.jpg" 
+                    alt="Learn to Design Home, Offices & Villas" 
+                    className="w-full h-auto object-cover rounded-2xl md:rounded-3xl"
+                    loading="eager"
+                  />
+                </div>
+                <div className="w-full overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border border-slate-100 transition-all hover:shadow-2xl">
+                  <img 
+                    src="/global-clients.jpg" 
+                    alt="Design For Clients From US, UK, Europe - High Paying Clients" 
+                    className="w-full h-auto object-cover rounded-2xl md:rounded-3xl"
+                    loading="eager"
+                  />
+                </div>
+              </div>
+
             </div>
           </div>
         </section>

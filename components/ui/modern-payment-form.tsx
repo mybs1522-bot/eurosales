@@ -160,7 +160,7 @@ function CheckoutForm({ email, onSuccess, onBack, amount, paymentIntentId }: Che
     }
 
     if (paymentIntent?.status === "succeeded") {
-      const numericAmount = parseInt(amount.replace(/[^0-9]/g, ''), 10) || 9;
+      const numericAmount = parseInt(amount.replace(/[^0-9]/g, ''), 10) || 49;
       if ((window as any).fbq) (window as any).fbq('track', 'Purchase', { value: numericAmount, currency: 'EUR' });
       const paymentMethodId = typeof paymentIntent.payment_method === 'string'
         ? paymentIntent.payment_method
@@ -240,7 +240,7 @@ export default function ModernPaymentForm({
   email,
   onSuccess,
   onBack,
-  amount = "€9",
+  amount = "€49",
   bare = false,
 }: ModernPaymentFormProps) {
   const [clientSecret, setClientSecret] = useState<string | null>(null);

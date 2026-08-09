@@ -118,7 +118,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose, ini
     setIsLoading(true);
 
     try {
-      if (selectedPlan.price === '€9') {
+      if (selectedPlan.price === '€49') {
          await submitPhoneNumber('', selectedPlan.id);
          window.location.href = 'https://www.avada.space/checkout';
          return;

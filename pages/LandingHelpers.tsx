@@ -81,11 +81,11 @@ export const CallToActionWidget = ({ timeLeft, onClick, headline, subtext }: { t
           <div className="flip-clock-group"><div className="flex gap-1"><FlipDigit value={s[0]} /><FlipDigit value={s[1]} /></div><span className="flip-clock-label">SEC</span></div>
         </div>
         <div className="mb-6">
-          <p className="text-red-400 font-semibold text-sm mt-2">SketchUp + V-Ray + D5 Render AI — All 3 Courses for Just €9</p>
+          <p className="text-red-400 font-semibold text-sm mt-2">SketchUp + V-Ray + D5 Render AI — All 3 Courses for Just €49</p>
         </div>
         <div className="w-full max-w-md mx-auto">
           <button onClick={onClick} className="cta-primary w-full text-white px-8 py-4 md:py-5 rounded-2xl transition-all duration-300 flex items-center justify-center gap-3 group hover:scale-[1.03] active:scale-[0.98] premium-stroke" style={{ background: 'linear-gradient(135deg, #f7a440 0%, #f7931e 100%)', boxShadow: '0 6px 20px -4px rgba(247,164,68,0.5), 0 12px 40px -8px rgba(247,147,30,0.25)', border: '1px solid rgba(255,255,255,0.15)' }}>
-            <span className="text-lg md:text-xl font-display font-bold uppercase tracking-widest relative z-10">Get Instant Access — €9</span>
+            <span className="text-lg md:text-xl font-display font-bold uppercase tracking-widest relative z-10">Get Instant Access — €49</span>
             <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -136,25 +136,25 @@ export const VALUE_STACK_ITEMS = [
 
 export const TESTIMONIALS_LANDING = [
   { name: 'Emma R.', role: 'Freelance Designer', location: 'Los Angeles, USA', content: 'I went from zero knowledge to delivering full plans and photorealistic D5 renders in 3 weeks. The 24/7 support team patiently walked me through every step. Now I feel completely secure in my career.' },
-  { name: 'James C.', role: 'Senior Architect', location: 'New York, USA', content: 'Having AutoCAD, SketchUp, and D5 Render in one bundle is genius. My studio now uses the full pipeline — plan, design, render — to generate gorgeous client presentations in minutes. Best €9 our firm ever invested.' },
+  { name: 'James C.', role: 'Senior Architect', location: 'New York, USA', content: 'Having AutoCAD, SketchUp, and D5 Render in one bundle is genius. My studio now uses the full pipeline — plan, design, render — to generate gorgeous client presentations in minutes. Best €49 our firm ever invested.' },
   { name: 'Sophie L.', role: '3D Visualizer', location: 'London, UK', content: 'The step-by-step guidance from AutoCAD planning to SketchUp modeling to D5 rendering is incredible. I can make real-time changes during client meetings. Complete game-changer.' },
   { name: 'Daniel C.', role: 'Architecture Student', location: 'Toronto, Canada', content: 'College taught me outdated software. This bundle gave me AutoCAD + SketchUp + D5 Render in two weeks. I started freelancing before graduation and now earn more than some employed architects.' },
-  { name: 'Olivia B.', role: 'Interior Designer', location: 'Sydney, Australia', content: 'To have someone look at your screen and say "press this button" saves weeks of frustration. AutoCAD for planning, SketchUp for designing, D5 for rendering. All for €9.' },
+  { name: 'Olivia B.', role: 'Interior Designer', location: 'Sydney, Australia', content: 'To have someone look at your screen and say "press this button" saves weeks of frustration. AutoCAD for planning, SketchUp for designing, D5 for rendering. All for €49.' },
   { name: 'Marco R.', role: 'Landscape Architect', location: 'Milan, Italy', content: 'D5 Render combined with SketchUp is just magical. I plan in AutoCAD, design in SketchUp, and use D5 for real-time client walkthroughs. It took away all my anxiety about falling behind.' },
   { name: 'Sarah K.', role: 'Studio Owner', location: 'Berlin, Germany', content: 'My team of 4 now works with zero stress because we integrated the AutoCAD → SketchUp → D5 pipeline. No more late nights before client meetings. We deliver faster, charge more.' },
   { name: 'Ryan M.', role: 'Freelance Visualizer', location: 'Dubai, UAE', content: 'I almost quit design entirely because I couldn\'t connect the dots between planning and rendering. This bundle connected everything. AutoCAD for plans, SketchUp for 3D, D5 AI for speed.' },
   { name: 'Chloe P.', role: 'Design Student', location: 'Singapore', content: 'Started from absolute zero. Didn\'t even know what AutoCAD was. 15 days later, my portfolio had professional floor plans and photorealistic renders from D5 that landed me a paid studio gig.' },
-  { name: 'Alex D.', role: 'Architect & Educator', location: 'Barcelona, Spain', content: 'Universities don\'t teach this pipeline. AutoCAD + SketchUp + D5 Render AI is what the industry actually uses. I recommend this €9 bundle to all my students — it\'s more practical than their entire semester.' },
+  { name: 'Alex D.', role: 'Architect & Educator', location: 'Barcelona, Spain', content: 'Universities don\'t teach this pipeline. AutoCAD + SketchUp + D5 Render AI is what the industry actually uses. I recommend this €49 bundle to all my students — it\'s more practical than their entire semester.' },
 ];
 
 export const FAQ_ITEMS_LANDING = [
-  { question: "What exactly do I get for €9?", answer: "You get 3 complete courses: AutoCAD (professional 2D floor plans & drafting), SketchUp Pro (3D modeling from scratch), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software download links, a certified diploma, and 24/7 team support. Lifetime access, one-time payment." },
+  { question: "What exactly do I get for €49?", answer: "You get 3 complete courses: AutoCAD (professional 2D floor plans & drafting), SketchUp Pro (3D modeling from scratch), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software download links, a certified diploma, and 24/7 team support. Lifetime access, one-time payment." },
   { question: "I'm a complete beginner — is this for me?", answer: "Absolutely! The AutoCAD course starts from 'how to open the software' and builds up to full floor plans. SketchUp and D5 Render courses follow the same beginner-friendly approach. Our 24/7 support team is always a WhatsApp message away whenever you feel stuck." },
   { question: "Why is it so cheap? What's the catch?", answer: "No catch. We believe high-quality design education shouldn't cost €300+. We've served 50,000+ students at this price point and it works — low price, high volume, massive impact. You get the same content other platforms charge hundreds for." },
   { question: "Do I need to buy expensive software?", answer: "Not at all. We provide links to official free or student versions of AutoCAD, SketchUp, and D5 Render. You won't spend a single extra euro on software licenses." },
   { question: "Will this actually help me get clients or a job?", answer: "Yes. The #1 reason designers struggle to land clients is they can't plan, design, and render professionally. This bundle teaches you the full pipeline — AutoCAD for planning, SketchUp for designing, D5 AI for rendering. Designers with these skills charge €2,000–€5,000 per project." },
   { question: "How long does it take to finish all 3 courses?", answer: "Most students complete the full pipeline in 2–3 weeks at 1–2 hours per day. AutoCAD takes about 5 days, SketchUp about 5, and D5 Render about 3. By day 15, you'll have portfolio-ready renders." },
-  { question: "What if it's not for me?", answer: "We offer a 100% money-back guarantee within 7 days. If you feel it's not a good fit, just email us and we'll refund your €9 immediately — no questions asked. Zero risk." },
+  { question: "What if it's not for me?", answer: "We offer a 100% money-back guarantee within 7 days. If you feel it's not a good fit, just email us and we'll refund your €49 immediately — no questions asked. Zero risk." },
 ];
 
 export const INCOME_TIERS = [
