@@ -47,7 +47,7 @@ function PayPalButton({ email, onSuccess, amount }: { email: string; onSuccess: 
           purchase_units: [{ amount: { value: amountVal }, description: 'Avada Design Bundle – All Courses' }],
           payer: { email_address: emailRef.current },
         }),
-      onApprove: async (_: any, actions: any) => { await actions.order.capture(); if ((window as any).fbq) (window as any).fbq('track', 'Purchase', { value: 49, currency: 'EUR' }); onSuccessRef.current(); },
+      onApprove: async (_: any, actions: any) => { await actions.order.capture(); if ((window as any).fbq) (window as any).fbq('track', 'Purchase', { value: 39, currency: 'EUR' }); onSuccessRef.current(); },
       onError: (e: any) => console.error('[PayPal]', e),
     }).render(containerRef.current);
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -240,7 +240,7 @@ export default function ModernPaymentForm({
   email,
   onSuccess,
   onBack,
-  amount = "€49",
+  amount = "€39",
   bare = false,
 }: ModernPaymentFormProps) {
   const [clientSecret, setClientSecret] = useState<string | null>(null);

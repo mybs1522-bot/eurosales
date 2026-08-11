@@ -237,7 +237,7 @@ export const FRONT_END_COURSES = COURSES.filter(c => FRONT_END_IDS.includes(c.id
 // ─── UPSELL: Everything else ───
 export const UPSELL_COURSES = COURSES.filter(c => !FRONT_END_IDS.includes(c.id));
 
-export const FRONT_END_PRICE = 49;
+export const FRONT_END_PRICE = 39;
 export const FRONT_END_ORIGINAL_PRICE = 99;
 export const UPSELL_PRICE = 27;
 export const UPSELL_ORIGINAL_PRICE = 199;
@@ -388,7 +388,7 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Olivia Brooks',
     role: 'Interior Designer',
     location: 'Sydney, Australia',
-    content: 'I can model a room in SketchUp, render video in Lumion, and show variations in D5 — all in the time it used to take for one basic drawing. Best €49 ever.'
+    content: 'I can model a room in SketchUp, render video in Lumion, and show variations in D5 — all in the time it used to take for one basic drawing. Best €39 ever.'
   },
   {
     name: 'Marco Rossi',
@@ -400,7 +400,7 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
-    question: "What exactly do I get for €49?",
+    question: "What exactly do I get for €39?",
     answer: "You get 4 complete courses: AutoCAD Mastery (2D floor plans), SketchUp Pro (3D modeling), Lumion Cinematic (video walkthroughs), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software links, a certified diploma, and 24/7 team support. Lifetime access."
   },
   {
