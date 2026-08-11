@@ -141,6 +141,11 @@ const LandingPage: React.FC = () => {
                 No university degree needed. No expensive software to buy. <strong className="text-slate-900 font-bold">All software download links included.</strong> Everything you need is included.
               </p>
 
+              {/* Hero Video */}
+              <div className="w-full mb-5 overflow-hidden rounded-2xl shadow-2xl border border-slate-100" style={{ position: 'relative', paddingTop: '56.25%' }}>
+                <iframe src="https://iframe.mediadelivery.net/embed/489113/a214b199-e64a-4eaf-af70-edfbc586e5fd?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style={{ border: 0, position: 'absolute', top: 0, height: '100%', width: '100%' }} allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowFullScreen={true} />
+              </div>
+
               {/* Zero-knowledge note */}
               <div className="w-full mb-5 flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-4 py-4 text-left">
                 <span className="text-xl shrink-0 mt-0.5">💻</span>
@@ -150,11 +155,6 @@ const LandingPage: React.FC = () => {
                     Never opened SketchUp? Never rendered anything? That's totally fine — we start from scratch. All you need is a <strong className="text-slate-700">laptop or PC</strong> and we'll take care of the rest.
                   </p>
                 </div>
-              </div>
-
-              {/* Hero Video */}
-              <div className="w-full mb-5 overflow-hidden rounded-2xl shadow-2xl border border-slate-100" style={{ position: 'relative', paddingTop: '56.25%' }}>
-                <iframe src="https://iframe.mediadelivery.net/embed/489113/a214b199-e64a-4eaf-af70-edfbc586e5fd?autoplay=true&loop=true&muted=true&preload=true&responsive=true" loading="lazy" style={{ border: 0, position: 'absolute', top: 0, height: '100%', width: '100%' }} allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowFullScreen={true} />
               </div>
 
               {/* Post-video hook */}
