@@ -136,7 +136,7 @@ const LandingPage: React.FC = () => {
 
               {/* Sub-headline */}
               <p className="text-slate-600 font-medium text-sm md:text-base max-w-xl mx-auto leading-relaxed mb-6">
-                No university degree needed. No expensive software to buy. Everything you need is included.
+                No university degree needed. No expensive software to buy. <strong className="text-slate-900 font-bold">All software download links included.</strong> Everything you need is included.
               </p>
 
               {/* Zero-knowledge note */}
@@ -184,6 +184,7 @@ const LandingPage: React.FC = () => {
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> Zero prior knowledge needed — we start from absolute scratch</li>
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> 4 courses that form one seamless workflow: Plan → Design → Animate → Render</li>
+                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> <strong>All Software Download Links Included</strong> — no expensive licenses to buy</li>
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> AI does the heavy lifting — you focus on creativity, not tech headaches</li>
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> Go from zero to client-ready renders in just 15 days</li>
                 </ul>
@@ -194,7 +195,7 @@ const LandingPage: React.FC = () => {
                 <Download size={18} className="shrink-0" />
                 Get All 4 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
               </button>
-              <p className="text-[11px] md:text-xs text-slate-400 mt-3 font-medium">24/7 Support • Free AI Software • 7-Day Money-Back Guarantee</p>
+              <p className="text-[11px] md:text-xs text-slate-400 mt-3 font-medium">24/7 Support • All Software Links Included • Free AI Software • 7-Day Guarantee</p>
 
               {/* Banners Below First CTA */}
               <div className="w-full mt-8 flex flex-col gap-6">
