@@ -113,9 +113,9 @@ const LandingPage: React.FC = () => {
             <div className="flex flex-col items-center text-center pt-7 md:pt-14">
 
               {/* Top Text with Money Highlight */}
-              <div className="mb-5 text-xs sm:text-sm font-black uppercase tracking-wider text-slate-900 flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 text-center max-w-full px-2 leading-relaxed">
+              <div className="mb-5 text-[7.5px] min-[360px]:text-[8.5px] min-[400px]:text-[9.5px] sm:text-xs md:text-sm font-black uppercase tracking-wider text-slate-900 whitespace-nowrap flex items-center justify-center gap-1 sm:gap-1.5 text-center max-w-full px-1">
                 <span>START CHARGING</span>
-                <span className="bg-[#FFD600] text-slate-950 px-2.5 py-0.5 rounded-md sm:rounded-full font-black shadow-sm whitespace-nowrap">
+                <span className="bg-[#FFD600] text-slate-950 px-1.5 sm:px-2.5 py-0.5 rounded-md sm:rounded-full font-black shadow-sm shrink-0">
                   €500–€2,000
                 </span>
                 <span>FOR DESIGNING AND RENDERING.</span>
