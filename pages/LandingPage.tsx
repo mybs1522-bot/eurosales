@@ -130,9 +130,10 @@ const LandingPage: React.FC = () => {
                 with 3 Paid Freelance Projects.
               </h1>
 
-              {/* Single Line Hero Callout */}
-              <div className="mb-6 inline-flex items-center justify-center bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 text-white text-[11px] min-[360px]:text-[12.5px] sm:text-sm md:text-base font-black px-4 sm:px-6 py-2 sm:py-2.5 rounded-full shadow-lg shadow-orange-500/20 whitespace-nowrap max-w-full">
-                4 Software 10 Euro Each | Lifetime Access
+              {/* Single Line Hero Callout — Glassmorphism */}
+              <div className="mb-6 inline-flex items-center justify-center bg-orange-500/10 backdrop-blur-md border border-orange-500/25 text-orange-950 text-[10px] min-[360px]:text-[11.5px] sm:text-xs md:text-sm font-bold px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-sm whitespace-nowrap max-w-full gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                <span>4 Software • €10 Each • Lifetime Access</span>
               </div>
 
               {/* Sub-headline */}
