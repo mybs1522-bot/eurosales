@@ -175,14 +175,27 @@ const LandingPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="w-full mb-5 bg-orange-50 border border-orange-200 rounded-2xl px-4 py-4 text-left">
-                <p className="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">✨ Why This Bundle Is Different</p>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> Zero prior knowledge needed — we start from absolute scratch</li>
-                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> 4 courses that form one seamless workflow: Plan → Design → Animate → Render</li>
-                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> <strong>All Software Download Links Included</strong> — no expensive licenses to buy</li>
-                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> AI does the heavy lifting — you focus on creativity, not tech headaches</li>
-                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> Go from zero to client-ready renders in just 15 days</li>
+              <div className="w-full mb-5 bg-gradient-to-br from-orange-50/80 to-amber-50/40 border border-orange-200/80 rounded-2xl p-4 md:p-5 text-left shadow-sm">
+                <p className="text-xs font-bold uppercase tracking-widest text-orange-600 mb-3 flex items-center gap-1.5">
+                  <Sparkles size={14} className="text-orange-500" /> Why This Bundle Is Different
+                </p>
+                <ul className="space-y-2.5">
+                  <li className="flex items-start gap-2.5 text-xs md:text-sm text-slate-800">
+                    <CheckCircle size={15} className="text-orange-500 shrink-0 mt-0.5" />
+                    <span><strong>100% Beginner Friendly</strong> — Start from absolute zero</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs md:text-sm text-slate-800">
+                    <CheckCircle size={15} className="text-orange-500 shrink-0 mt-0.5" />
+                    <span><strong>4-in-1 Workflow</strong> — Plan → Design → Animate → Render</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs md:text-sm text-slate-800">
+                    <CheckCircle size={15} className="text-orange-500 shrink-0 mt-0.5" />
+                    <span><strong>Software Included</strong> — Free & student download links</span>
+                  </li>
+                  <li className="flex items-start gap-2.5 text-xs md:text-sm text-slate-800">
+                    <CheckCircle size={15} className="text-orange-500 shrink-0 mt-0.5" />
+                    <span><strong>Client-Ready in 15 Days</strong> — Build portfolio-grade renders fast</span>
+                  </li>
                 </ul>
               </div>
 
