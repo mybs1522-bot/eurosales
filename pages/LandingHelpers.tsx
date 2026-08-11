@@ -126,6 +126,7 @@ export const SocialProofToast: React.FC = () => {
 export const VALUE_STACK_ITEMS = [
   { name: 'AutoCAD Planning & Drafting — Complete Course', value: 'Included' },
   { name: 'SketchUp 3D Modeling — Complete Course', value: 'Included' },
+  { name: 'Lumion Cinematic Walkthroughs Course', value: 'Included' },
   { name: 'D5 Real-Time AI Rendering Course', value: 'Included' },
   { name: '10,000+ Premium Texture Library', value: 'Included' },
   { name: '2,000+ Drag-and-Drop 3D Models', value: 'Included' },
@@ -136,24 +137,24 @@ export const VALUE_STACK_ITEMS = [
 
 export const TESTIMONIALS_LANDING = [
   { name: 'Emma R.', role: 'Freelance Designer', location: 'Los Angeles, USA', content: 'I went from zero knowledge to delivering full plans and photorealistic D5 renders in 3 weeks. The 24/7 support team patiently walked me through every step. Now I feel completely secure in my career.' },
-  { name: 'James C.', role: 'Senior Architect', location: 'New York, USA', content: 'Having AutoCAD, SketchUp, and D5 Render in one bundle is genius. My studio now uses the full pipeline — plan, design, render — to generate gorgeous client presentations in minutes. Best €49 our firm ever invested.' },
-  { name: 'Sophie L.', role: '3D Visualizer', location: 'London, UK', content: 'The step-by-step guidance from AutoCAD planning to SketchUp modeling to D5 rendering is incredible. I can make real-time changes during client meetings. Complete game-changer.' },
-  { name: 'Daniel C.', role: 'Architecture Student', location: 'Toronto, Canada', content: 'College taught me outdated software. This bundle gave me AutoCAD + SketchUp + D5 Render in two weeks. I started freelancing before graduation and now earn more than some employed architects.' },
-  { name: 'Olivia B.', role: 'Interior Designer', location: 'Sydney, Australia', content: 'To have someone look at your screen and say "press this button" saves weeks of frustration. AutoCAD for planning, SketchUp for designing, D5 for rendering. All for €49.' },
-  { name: 'Marco R.', role: 'Landscape Architect', location: 'Milan, Italy', content: 'D5 Render combined with SketchUp is just magical. I plan in AutoCAD, design in SketchUp, and use D5 for real-time client walkthroughs. It took away all my anxiety about falling behind.' },
-  { name: 'Sarah K.', role: 'Studio Owner', location: 'Berlin, Germany', content: 'My team of 4 now works with zero stress because we integrated the AutoCAD → SketchUp → D5 pipeline. No more late nights before client meetings. We deliver faster, charge more.' },
-  { name: 'Ryan M.', role: 'Freelance Visualizer', location: 'Dubai, UAE', content: 'I almost quit design entirely because I couldn\'t connect the dots between planning and rendering. This bundle connected everything. AutoCAD for plans, SketchUp for 3D, D5 AI for speed.' },
-  { name: 'Chloe P.', role: 'Design Student', location: 'Singapore', content: 'Started from absolute zero. Didn\'t even know what AutoCAD was. 15 days later, my portfolio had professional floor plans and photorealistic renders from D5 that landed me a paid studio gig.' },
-  { name: 'Alex D.', role: 'Architect & Educator', location: 'Barcelona, Spain', content: 'Universities don\'t teach this pipeline. AutoCAD + SketchUp + D5 Render AI is what the industry actually uses. I recommend this €49 bundle to all my students — it\'s more practical than their entire semester.' },
+  { name: 'James C.', role: 'Senior Architect', location: 'New York, USA', content: 'Having AutoCAD, SketchUp, Lumion and D5 Render in one bundle is genius. My studio now uses the full pipeline — plan, design, animate, render — to generate gorgeous client presentations in minutes. Best €49 our firm ever invested.' },
+  { name: 'Sophie L.', role: '3D Visualizer', location: 'London, UK', content: 'The step-by-step guidance from AutoCAD planning to SketchUp modeling to Lumion walkthroughs and D5 rendering is incredible. I can make real-time changes during client meetings. Complete game-changer.' },
+  { name: 'Daniel C.', role: 'Architecture Student', location: 'Toronto, Canada', content: 'College taught me outdated software. This bundle gave me AutoCAD + SketchUp + Lumion + D5 Render in two weeks. I started freelancing before graduation and now earn more than some employed architects.' },
+  { name: 'Olivia B.', role: 'Interior Designer', location: 'Sydney, Australia', content: 'To have someone look at your screen and say "press this button" saves weeks of frustration. AutoCAD for planning, SketchUp for designing, Lumion & D5 for rendering. All for €49.' },
+  { name: 'Marco R.', role: 'Landscape Architect', location: 'Milan, Italy', content: 'Lumion combined with SketchUp & D5 is just magical. I plan in AutoCAD, design in SketchUp, and use Lumion for video walkthroughs. It took away all my anxiety about falling behind.' },
+  { name: 'Sarah K.', role: 'Studio Owner', location: 'Berlin, Germany', content: 'My team of 4 now works with zero stress because we integrated the AutoCAD → SketchUp → Lumion → D5 pipeline. No more late nights before client meetings. We deliver faster, charge more.' },
+  { name: 'Ryan M.', role: 'Freelance Visualizer', location: 'Dubai, UAE', content: 'I almost quit design entirely because I couldn\'t connect the dots between planning and rendering. This bundle connected everything. AutoCAD for plans, SketchUp for 3D, Lumion for animation, D5 AI for speed.' },
+  { name: 'Chloe P.', role: 'Design Student', location: 'Singapore', content: 'Started from absolute zero. Didn\'t even know what AutoCAD was. 15 days later, my portfolio had professional floor plans and cinematic video renders from Lumion that landed me a paid studio gig.' },
+  { name: 'Alex D.', role: 'Architect & Educator', location: 'Barcelona, Spain', content: 'Universities don\'t teach this pipeline. AutoCAD + SketchUp + Lumion + D5 Render AI is what the industry actually uses. I recommend this €49 bundle to all my students — it\'s more practical than their entire semester.' },
 ];
 
 export const FAQ_ITEMS_LANDING = [
-  { question: "What exactly do I get for €49?", answer: "You get 3 complete courses: AutoCAD (professional 2D floor plans & drafting), SketchUp Pro (3D modeling from scratch), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software download links, a certified diploma, and 24/7 team support. Lifetime access, one-time payment." },
-  { question: "I'm a complete beginner — is this for me?", answer: "Absolutely! The AutoCAD course starts from 'how to open the software' and builds up to full floor plans. SketchUp and D5 Render courses follow the same beginner-friendly approach. Our 24/7 support team is always a WhatsApp message away whenever you feel stuck." },
+  { question: "What exactly do I get for €49?", answer: "You get 4 complete courses: AutoCAD (professional 2D floor plans & drafting), SketchUp Pro (3D modeling from scratch), Lumion Cinematic (video walkthroughs & animations), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software download links, a certified diploma, and 24/7 team support. Lifetime access, one-time payment." },
+  { question: "I'm a complete beginner — is this for me?", answer: "Absolutely! The AutoCAD course starts from 'how to open the software' and builds up to full floor plans. SketchUp, Lumion, and D5 Render courses follow the same beginner-friendly approach. Our 24/7 support team is always a WhatsApp message away whenever you feel stuck." },
   { question: "Why is it so cheap? What's the catch?", answer: "No catch. We believe high-quality design education shouldn't cost €300+. We've served 50,000+ students at this price point and it works — low price, high volume, massive impact. You get the same content other platforms charge hundreds for." },
-  { question: "Do I need to buy expensive software?", answer: "Not at all. We provide links to official free or student versions of AutoCAD, SketchUp, and D5 Render. You won't spend a single extra euro on software licenses." },
-  { question: "Will this actually help me get clients or a job?", answer: "Yes. The #1 reason designers struggle to land clients is they can't plan, design, and render professionally. This bundle teaches you the full pipeline — AutoCAD for planning, SketchUp for designing, D5 AI for rendering. Designers with these skills charge €2,000–€5,000 per project." },
-  { question: "How long does it take to finish all 3 courses?", answer: "Most students complete the full pipeline in 2–3 weeks at 1–2 hours per day. AutoCAD takes about 5 days, SketchUp about 5, and D5 Render about 3. By day 15, you'll have portfolio-ready renders." },
+  { question: "Do I need to buy expensive software?", answer: "Not at all. We provide links to official free or student versions of AutoCAD, SketchUp, Lumion, and D5 Render. You won't spend a single extra euro on software licenses." },
+  { question: "Will this actually help me get clients or a job?", answer: "Yes. The #1 reason designers struggle to land clients is they can't plan, design, and render professionally. This bundle teaches you the full pipeline — AutoCAD for planning, SketchUp for designing, Lumion & D5 AI for rendering. Designers with these skills charge €2,000–€5,000 per project." },
+  { question: "How long does it take to finish all 4 courses?", answer: "Most students complete the full pipeline in 2–3 weeks at 1–2 hours per day. AutoCAD takes about 5 days, SketchUp about 5, Lumion about 3, and D5 Render about 3. By day 15, you'll have portfolio-ready renders." },
   { question: "What if it's not for me?", answer: "We offer a 100% money-back guarantee within 7 days. If you feel it's not a good fit, just email us and we'll refund your €49 immediately — no questions asked. Zero risk." },
 ];
 
@@ -176,8 +177,15 @@ export const COURSES_LANDING = [
     id: '3', title: 'SketchUp 3D', software: 'SketchUp', students: '55k',
     description: 'Build stunning 3D models from scratch — walls, furniture, kitchens, bathrooms. Turn your AutoCAD plans into immersive 3D designs.',
     imageUrl: 'https://lh3.googleusercontent.com/d/1wl6by5AO5MiPeoYsZ8F6Zi5AJahoeTQo',
-    learningPoints: ['Build complete 3D interiors from a blank canvas', 'Apply textures, materials & furniture with confidence', 'Export professional scenes ready for D5 Render'],
+    learningPoints: ['Build complete 3D interiors from a blank canvas', 'Apply textures, materials & furniture with confidence', 'Export professional scenes ready for Lumion & D5 Render'],
     workflowImpact: 'See your imagination come to life in 3D — no experience needed.'
+  },
+  {
+    id: '6', title: 'Lumion Cinematic', software: 'Lumion', students: '31k',
+    description: 'Make movies & cinematic video walkthroughs of your architecture with real-time lighting, grass, trees, and motion.',
+    imageUrl: 'https://lh3.googleusercontent.com/d/1XW2DDHVa1Qc15NcZ3wUKMFRT7LkyZMCt',
+    learningPoints: ['Add grass, trees, animated people and water instantly', 'Create cinematic 4K video tours of your designs', 'Produce 1-minute video presentations that close clients fast'],
+    workflowImpact: 'A 1-minute video sells a project better than 100 flat drawings.'
   },
   {
     id: '7', title: 'D5 Render AI', software: 'D5 Render', students: '19k',

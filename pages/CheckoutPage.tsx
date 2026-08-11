@@ -62,7 +62,7 @@ const CheckoutPage: React.FC = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <p className="text-xs font-semibold text-gray-600 mt-2 text-center max-w-[200px]">🎨 AutoCAD + SketchUp + D5 Render AI Bundle</p>
+        <p className="text-xs font-semibold text-gray-600 mt-2 text-center max-w-[220px]">🎨 AutoCAD + SketchUp + Lumion + D5 Render AI Bundle</p>
       </div>
 
       <div className="checkout-card w-full max-w-md bg-white rounded-3xl shadow-2xl overflow-hidden">
@@ -72,7 +72,7 @@ const CheckoutPage: React.FC = () => {
               <Sparkles size={11} /> Plan-to-Render Pipeline
             </div>
           </div>
-          <h3 className="text-xl font-display font-bold mb-1">AutoCAD + SketchUp + D5 Render</h3>
+          <h3 className="text-xl font-display font-bold mb-1">AutoCAD + SketchUp + Lumion + D5 Render</h3>
           <div className="flex items-baseline gap-2">
             <span className="text-2xl font-display font-black">€{FRONT_END_PRICE}</span>
             <span className="text-gray-500 text-sm line-through">€{FRONT_END_ORIGINAL_PRICE}</span>
@@ -82,7 +82,7 @@ const CheckoutPage: React.FC = () => {
 
         <div className="px-6 pt-5 pb-6">
           <div className="grid grid-cols-2 gap-2 mb-4">
-            {["3 Premium Courses", "10,000+ Textures", "Official Certificate", "24/7 Team Support", "Lifetime Access"].map((item, i) => (
+            {["4 Premium Courses", "10,000+ Textures", "Official Certificate", "24/7 Team Support", "Lifetime Access"].map((item, i) => (
               <div key={i} className="flex items-center gap-2 text-xs text-gray-700 font-medium">
                 <CheckCircle2 size={12} className="text-gray-500 shrink-0" /> {item}
               </div>

@@ -183,7 +183,7 @@ const LandingPage: React.FC = () => {
                 <p className="text-xs font-bold uppercase tracking-widest text-orange-500 mb-3">✨ Why This Bundle Is Different</p>
                 <ul className="space-y-2">
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> Zero prior knowledge needed — we start from absolute scratch</li>
-                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> 3 courses that form one seamless workflow: Design → Render → Deliver</li>
+                  <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> 4 courses that form one seamless workflow: Plan → Design → Animate → Render</li>
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> AI does the heavy lifting — you focus on creativity, not tech headaches</li>
                   <li className="flex items-start gap-2 text-sm md:text-base font-semibold text-slate-800"><span className="text-orange-400 shrink-0">—</span> Go from zero to client-ready renders in just 15 days</li>
                 </ul>
@@ -192,7 +192,7 @@ const LandingPage: React.FC = () => {
               {/* CTA */}
               <button onClick={openPaymentModal} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl font-bold text-base md:text-lg shadow-xl shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-[1.03] transition-all flex items-center justify-center gap-3 group premium-stroke">
                 <Download size={18} className="shrink-0" />
-                Get All 3 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+                Get All 4 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
               </button>
               <p className="text-[11px] md:text-xs text-slate-400 mt-3 font-medium">24/7 Support • Free AI Software • 7-Day Money-Back Guarantee</p>
 
@@ -227,16 +227,16 @@ const LandingPage: React.FC = () => {
              <div className="text-center reveal">
                  <div className="inline-flex items-center gap-2 text-orange-500 text-xs font-bold uppercase tracking-widest mb-2">
                    <Sparkles size={14} />
-                   3 Premium Courses Included
+                   4 Premium Courses Included
                  </div>
                  <h2 className="text-2xl md:text-4xl font-display font-black text-gray-900 leading-tight">Master the Complete<br/>Design-to-Render Pipeline</h2>
-                 <p className="text-slate-500 mt-3 text-sm md:text-base max-w-2xl mx-auto">From your first 3D floor plan to stunning photorealistic renders — everything you need in one bundle.</p>
+                 <p className="text-slate-500 mt-3 text-sm md:text-base max-w-2xl mx-auto">From your first 3D floor plan to stunning photorealistic renders & video walkthroughs — everything you need in one bundle.</p>
              </div>
            </div>
            
-           {/* Course cards — 3 courses */}
-           <div className="max-w-4xl mx-auto px-4">
-             <div className="grid grid-cols-3 gap-3 md:gap-6">
+           {/* Course cards — 4 courses */}
+           <div className="max-w-5xl mx-auto px-4">
+             <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
                {FRONT_END_COURSES.map((course, i) => (
                  <div key={course.id} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden group hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                    <div className="relative aspect-square overflow-hidden bg-gray-100">
@@ -365,7 +365,7 @@ const LandingPage: React.FC = () => {
                   <span className="text-slate-900 font-bold text-center">Lifetime Access + Free Updates</span>
                 </div>
                 <button onClick={openPaymentModal} className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-xl font-bold text-lg shadow-xl shadow-orange-500/20 hover:scale-[1.02] transition-all flex items-center justify-center gap-3 group premium-stroke whitespace-nowrap">
-                  <Download size={16} /> Get All 3 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+                  <Download size={16} /> Get All 4 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
                 </button>
               </div>
             </div>
@@ -565,7 +565,7 @@ const LandingPage: React.FC = () => {
           <div className="flex-1 flex flex-col gap-1">
             <button onClick={openPaymentModal} className="flex-1 flex items-center justify-center gap-1.5 bg-slate-900 text-white text-xs font-bold py-3 rounded-xl hover:bg-black transition-all"
               style={{ boxShadow: '0 0 0 2px #f97316, 0 0 12px rgba(249,115,22,0.35)' }}>
-              Get All 3 Courses — €{FRONT_END_PRICE}
+              Get All 4 Courses — €{FRONT_END_PRICE}
               <ArrowRight size={13} />
             </button>
           </div>

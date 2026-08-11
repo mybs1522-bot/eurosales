@@ -230,8 +230,8 @@ export const COURSES = RAW_COURSES.map(course => {
   return { ...course, imageUrl: url };
 });
 
-// ─── FRONT-END OFFER: AutoCAD + SketchUp + D5 Render ───
-export const FRONT_END_IDS = ['1', '3', '7'];
+// ─── FRONT-END OFFER: AutoCAD + SketchUp + Lumion + D5 Render ───
+export const FRONT_END_IDS = ['1', '3', '6', '7'];
 export const FRONT_END_COURSES = COURSES.filter(c => FRONT_END_IDS.includes(c.id));
 
 // ─── UPSELL: Everything else ───
@@ -364,44 +364,44 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'James Carter',
     role: 'Senior Architect',
     location: 'New York, USA',
-    content: 'Having SketchUp, V-Ray and D5 Render in one bundle changed how our entire studio works. We model, render, and present — all from this €49 course.'
+    content: 'Having SketchUp, Lumion and D5 Render in one bundle changed how our entire studio works. We model, render, and present — all from this €49 course.'
   },
   {
     name: 'Sophie Laurent',
     role: '3D Visualizer',
     location: 'London, UK',
-    content: 'The SketchUp-to-V-Ray pipeline is so well taught. D5 Render AI lets me do real-time walkthroughs in client meetings. My close rate doubled.'
+    content: 'The SketchUp-to-Lumion pipeline is so well taught. D5 Render AI lets me do real-time walkthroughs in client meetings. My close rate doubled.'
   },
   {
     name: 'Emma Rodriguez',
     role: 'Freelance Designer',
     location: 'Los Angeles, USA',
-    content: 'I went from flat 2D drawings to photorealistic V-Ray renders in 2 weeks. Built my entire freelance portfolio from these 3 courses. Now I charge 3x more.'
+    content: 'I went from flat 2D drawings to photorealistic Lumion renders in 2 weeks. Built my entire freelance portfolio from these 4 courses. Now I charge 3x more.'
   },
   {
     name: 'Daniel Chen',
     role: 'Architecture Student',
     location: 'Toronto, Canada',
-    content: 'SketchUp + V-Ray + D5 Render AI — this pipeline is what firms actually use. I was the only student who knew all three. Landed my dream internship immediately.'
+    content: 'SketchUp + Lumion + D5 Render AI — this pipeline is what firms actually use. I was the only student who knew all four. Landed my dream internship immediately.'
   },
   {
     name: 'Olivia Brooks',
     role: 'Interior Designer',
     location: 'Sydney, Australia',
-    content: 'I can model a room in SketchUp, render it in V-Ray, and show 10 variations in D5 — all in the time it used to take for one basic drawing. Best €49 ever.'
+    content: 'I can model a room in SketchUp, render video in Lumion, and show variations in D5 — all in the time it used to take for one basic drawing. Best €49 ever.'
   },
   {
     name: 'Marco Rossi',
     role: 'Landscape Architect',
     location: 'Milan, Italy',
-    content: 'D5 Render AI for real-time changes during meetings, V-Ray for portfolio-grade shots, SketchUp for the foundation. This bundle covers everything.'
+    content: 'D5 Render AI for real-time changes, Lumion for cinematic videos, SketchUp for the foundation. This bundle covers everything.'
   }
 ];
 
 export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What exactly do I get for €49?",
-    answer: "You get 3 complete courses: SketchUp Pro (3D modeling), V-Ray Photorealism (beauty shots), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software links, a certified diploma, and 24/7 team support. Lifetime access."
+    answer: "You get 4 complete courses: AutoCAD Mastery (2D floor plans), SketchUp Pro (3D modeling), Lumion Cinematic (video walkthroughs), and D5 Render AI (real-time AI rendering). Plus 10,000+ textures, 2,000+ 3D models, all software links, a certified diploma, and 24/7 team support. Lifetime access."
   },
   {
     question: "How do I access the courses after buying?",
