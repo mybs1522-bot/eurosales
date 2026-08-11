@@ -157,6 +157,15 @@ const LandingPage: React.FC = () => {
                 </div>
               </div>
 
+              {/* CTA */}
+              <div className="w-full mb-6 flex flex-col items-center">
+                <button onClick={openPaymentModal} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl font-bold text-base md:text-lg shadow-xl shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-[1.03] transition-all flex items-center justify-center gap-3 group premium-stroke">
+                  <Download size={18} className="shrink-0" />
+                  Get All 4 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
+                </button>
+                <p className="text-[11px] md:text-xs text-slate-400 mt-3 font-medium text-center">24/7 Support • All Software Links Included • Free AI Software • 7-Day Guarantee</p>
+              </div>
+
               {/* Post-video hook */}
               <div className="w-full mb-6 text-center">
                 <p className="text-xl md:text-3xl font-display font-black text-slate-900 leading-tight">
@@ -204,13 +213,6 @@ const LandingPage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
-              {/* CTA */}
-              <button onClick={openPaymentModal} className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-2xl font-bold text-base md:text-lg shadow-xl shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-[1.03] transition-all flex items-center justify-center gap-3 group premium-stroke">
-                <Download size={18} className="shrink-0" />
-                Get All 4 Courses — €{FRONT_END_PRICE} <ArrowRight className="group-hover:translate-x-1 transition-transform" size={18} />
-              </button>
-              <p className="text-[11px] md:text-xs text-slate-400 mt-3 font-medium">24/7 Support • All Software Links Included • Free AI Software • 7-Day Guarantee</p>
 
               {/* Banners Below First CTA */}
               <div className="w-full mt-8 flex flex-col gap-6">
