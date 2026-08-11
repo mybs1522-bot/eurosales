@@ -121,7 +121,7 @@ const LandingPage: React.FC = () => {
             <div className="flex flex-col items-center text-center pt-7 md:pt-14">
 
               {/* Top Pill Badge */}
-              <div className="mb-5 inline-block bg-[#FFD600] text-slate-950 text-[10px] md:text-xs font-black uppercase tracking-wider px-5 py-2 rounded-full shadow-sm">
+              <div className="mb-5 inline-block bg-[#FFD600] text-slate-950 text-[8px] min-[360px]:text-[9.5px] sm:text-xs font-black uppercase tracking-wider px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-sm whitespace-nowrap max-w-full">
                 START CHARGING €500–€2,000 FOR DESIGNING AND RENDERING.
               </div>
 
