@@ -104,15 +104,7 @@ const LandingPage: React.FC = () => {
         <p className="text-xs md:text-sm font-bold tracking-wide">Now available in Europe</p>
       </div>
 
-      {/* ═══ STICKY HEADER ═══ */}
-      <header className="sticky top-0 z-[60] bg-white/80 backdrop-blur-2xl border-b border-slate-100/60 px-5 py-4">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Logo />
-          <div className="flex items-center gap-4">
-            <button onClick={openPaymentModal} className="text-white px-6 py-2.5 rounded-full text-xs font-black uppercase tracking-widest hover:scale-105 transition-all premium-stroke" style={{ background: 'linear-gradient(135deg,#f97316,#ea580c)', boxShadow: '0 0 20px rgba(249,115,22,0.45)' }}>Get Access — €{FRONT_END_PRICE}</button>
-          </div>
-        </div>
-      </header>
+
 
       <main>
         {/* 1. HERO — The Primary Pitch */}
