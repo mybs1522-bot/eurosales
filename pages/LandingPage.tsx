@@ -112,9 +112,13 @@ const LandingPage: React.FC = () => {
           <div className="w-full px-4 md:max-w-3xl md:mx-auto relative z-10">
             <div className="flex flex-col items-center text-center pt-7 md:pt-14">
 
-              {/* Top Pill Badge */}
-              <div className="mb-5 inline-block bg-[#FFD600] text-slate-950 text-[8px] min-[360px]:text-[9.5px] sm:text-xs font-black uppercase tracking-wider px-3.5 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-sm whitespace-nowrap max-w-full">
-                START CHARGING €500–€2,000 FOR DESIGNING AND RENDERING.
+              {/* Top Text with Money Highlight */}
+              <div className="mb-5 text-[10px] min-[360px]:text-[11px] sm:text-xs font-black uppercase tracking-wider text-slate-900 whitespace-nowrap max-w-full flex items-center justify-center gap-1">
+                <span>START CHARGING</span>
+                <span className="bg-[#FFD600] text-slate-950 px-2.5 py-1 rounded-md sm:rounded-full font-black shadow-sm mx-0.5">
+                  €500–€2,000
+                </span>
+                <span>FOR DESIGNING AND RENDERING.</span>
               </div>
 
               {/* Main Headline */}
