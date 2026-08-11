@@ -120,59 +120,24 @@ const LandingPage: React.FC = () => {
           <div className="w-full px-4 md:max-w-3xl md:mx-auto relative z-10">
             <div className="flex flex-col items-center text-center pt-7 md:pt-14">
 
-              {/* Badge */}
-              <div className="mb-4 inline-flex items-center gap-2 px-4 py-1.5 bg-orange-50 border border-orange-300 rounded-full shadow-sm">
-                <Sparkles size={12} className="text-orange-500" />
-                <span className="text-[11px] md:text-xs font-bold text-orange-700 uppercase tracking-widest">For Architects & Interior Designers</span>
+              {/* Top Pill Badge */}
+              <div className="mb-5 inline-block bg-[#FFD600] text-slate-950 text-[10px] md:text-xs font-black uppercase tracking-wider px-5 py-2 rounded-full shadow-sm">
+                START CHARGING €500–€2,000 FOR DESIGNING AND RENDERING.
               </div>
 
-              {/* Headline */}
-              <h1 className="tracking-tight mb-5 md:mb-6 w-full">
-
-                {/* Industry truth */}
-                <span className="block text-[11px] md:text-xs font-bold text-slate-400 uppercase tracking-[0.2em] mb-4">
-                  In Architecture & Design —{' '}
-                  <span className="text-slate-600">Planning</span>,{' '}
-                  <span className="text-slate-600">Design</span> &{' '}
-                  <span className="text-slate-600">Rendering</span>{' '}matter the most.
-                </span>
-                <span className="block text-xs md:text-sm font-black text-slate-900 mt-2">
-                  We teach you all 3 at par with industry standards.
-                </span>
-
-                {/* Hook */}
-                <span className="block text-2xl leading-snug md:text-[2.6rem] font-display font-black text-slate-900 mb-1">
-                  The question isn't <em className="font-serif font-normal not-italic text-slate-500">if</em> you can.
-                </span>
-                <span className="block text-2xl leading-snug md:text-[2.6rem] font-display font-black text-slate-900 mb-6">
-                  It's —{' '}
-                  <span className="relative inline-block">
-                    <span className="text-orange-500">How to do it FASTER?</span>
-                    <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-orange-200 rounded-full"></span>
-                  </span>
-                </span>
-
-                {/* Divider */}
-                <span className="block w-10 h-[2px] bg-orange-300 rounded-full mx-auto mb-5"></span>
-
-                {/* Identity */}
-                <span className="block text-[1.65rem] leading-tight md:text-5xl font-display font-black text-slate-900 mb-1">
-                  If You Want to Design{' '}
-                  <span className="text-orange-500">Homes. Villas. Offices.</span>
-                </span>
-                <span className="block text-[1.5rem] leading-tight md:text-4xl font-display font-black text-slate-700 mb-4">
-                  Design Them in a Way<br />
-                  <span className="text-orange-500">the Industry Can't Ignore.</span>
-                </span>
-
-                {/* Consequence */}
-                <span className="block text-sm md:text-base text-slate-500 font-medium leading-relaxed max-w-lg mx-auto">
-                  Because that's the only way you can{' '}
-                  <strong className="text-slate-800">make money</strong> in this{' '}
-                  <strong className="text-orange-500">AI era.</strong>
-                </span>
-
+              {/* Main Headline */}
+              <h1 className="text-3xl md:text-5xl font-display font-black text-slate-950 tracking-tight leading-[1.25] max-w-3xl mx-auto mb-4">
+                Learn Interior & Exterior Designing in 15 days.{' '}
+                <span className="bg-[#FFE500] text-slate-950 px-2.5 py-0.5 rounded-lg inline-block my-1 font-black shadow-sm">
+                  Start Earning Fast
+                </span>{' '}
+                with 3 Paid Freelance Projects.
               </h1>
+
+              {/* Sub-headline */}
+              <p className="text-slate-600 font-medium text-sm md:text-base max-w-xl mx-auto leading-relaxed mb-6">
+                No university degree needed. No expensive software to buy. Everything you need is included.
+              </p>
 
               {/* Zero-knowledge note */}
               <div className="w-full mb-5 flex items-start gap-3 bg-slate-50 border border-slate-200 rounded-2xl px-4 py-4 text-left">
